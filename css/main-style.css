@@ -33,6 +33,15 @@ nav ul li a {
     text-align: center;
 }
 
+#valorant-logo{
+    fill: #ff4656;
+}
+
+nav:hover #valorant-logo{
+    fill: #ff0000;
+    transition: .2s ease-out;
+}
+
 nav ul li a:hover{
     color: #ff4656;
 }
