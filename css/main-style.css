@@ -8,3 +8,23 @@ Houd het dus zo algemeen mogelijk en gebruik geen responsiveness
 Alternatieve Tekst pagina. Andere layout,
 zelf te bepalen maar moet wel substantieel anders zijn dan de voorgaande Tekstpagina. 
 */
+
+/* global styles */
+body{
+    font-family: sans-serif;
+}
+
+/* nav */
+nav{
+    background-color: grey;
+}
+
+/* articles */
+section#news article > h1 {
+    font-size: 1.3rem;
+}
+
+/* footer */
+footer{
+    background-color: red;
+}
