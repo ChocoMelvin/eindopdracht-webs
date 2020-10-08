@@ -12,11 +12,19 @@ zelf te bepalen maar moet wel substantieel anders zijn dan de voorgaande Tekstpa
 /* global styles */
 body{
     font-family: sans-serif;
+    background-color: #ece8e1DE;
+}
+
+/* header */
+header{
+    background-color: rgba(0, 0, 0, .8);
+    box-shadow: 0px -6px 2px 7px #ff4656;
 }
 
 /* nav */
-nav{
-    background-color: grey;
+
+nav ul li {
+    padding: 0 10px;
 }
 
 nav ul li a {
@@ -24,16 +32,13 @@ nav ul li a {
     text-decoration: none;
     text-align: center;
 }
-nav ul li {
-    padding: 10px 5px;
+
+nav ul li a:hover{
+    color: lightgrey;
 }
+
 
 /* articles */
 section#news article > h1 {
     font-size: 1.3rem;
-}
-
-/* footer */
-footer{
-    background-color: red;
 }
