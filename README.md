@@ -1,19 +1,22 @@
-# Website
+# Valorant (schoolproject webs1)
 
-# Responsive
 
-Responsiveness Pagina's (Docent controle) [1.5]
+# Criteria
+**[Algemene Criteria](https://docs.google.com/spreadsheets/d/e/2PACX-1vQCqdVHo8z8lBxfYn5C067lJcex97CyNOlBzU7jngfFC1KdIPaN10csXVt8Q5kZKlBy60C0zf48auSN/pub?gid=1693068530&single=true&output=pdf)**
 
-- Minimaal 5 pagina's zijn zichtbaar en technisch responsive gemaakt voor twee schermgroottes. De gebruikte technieken (HTML/CSS) kunnen worden onderbouwd tijdens het assessment.
+### Knockout Criteria
+- De website heeft tenminste 5 webpagina's welke een significant andere layout/structuur hebben EN minimaal 1 webformulier
 
-- Minimaal 3 pagina's zijn zichtbaar en technisch responsive gemaakt voor twee schermgroottes. De gebruikte technieken (HTML/CSS) kunnen worden onderbouwd tijdens het assessment
+- De website bevat volwaardige content zodat alle beoordelingspunten zijn te testen. Geen 'blabla' maar een gegenereerde lorem ipsum mag wel.
 
-- Er zijn onvoldoende pagina's responsive opgezet en/of de gebruikte technieken worden niet/matig onderbouwd tijdens het assessment.
+- Je hebt een website met meerdere HTML bestanden en minimaal 1 CSS bestand en maximaal 3 CSS bestanden
 
-Responsive Navigatie menu (Student uitleg) [1.5]
+- Er mag geen inline styling in de code staan. Dus geen < div style="......">
 
-- Er is een responsive Dropdown Navigatie Menu aanwezig welke zich aanpast aan het type scherm en voldoet aan de technische eisen. De gebruikte technieken kunnen worden onderbouwd tijdens het assessment.
+- Je moet in de code mediaqueries gebruiken voor responsive aanpassingen
 
-- Er is een responsive Dropdown Navigatie Menu aanwezig maar werkt niet naar behoren / kleine fouten in de technische implementatie. De gebruikte technieken worden matig onderbouwd tijdens het assessment.
+- Er mogen geen dynamische talen en/of CSS frameworks gebruikt worden (PHP, Javascript, Bootstrap etc.)
 
-- Geen responsive menu aanwezig of gemaakte menu is incorrect geimplementeerd en/of geen correcte onderbouwing over de gemaakte technische keuzes
+- De opdracht is als .zip ingeleverd op blackboard voor de aangegeven deadline
+
+- De site wordt met Google Chrome getest. Daar moet de site foutloos in werken.
