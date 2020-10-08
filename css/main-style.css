@@ -19,6 +19,15 @@ nav{
     background-color: grey;
 }
 
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+nav ul li {
+    padding: 10px 5px;
+}
+
 /* articles */
 section#news article > h1 {
     font-size: 1.3rem;
