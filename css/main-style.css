@@ -18,7 +18,7 @@ body{
 /* header */
 header{
     background-color: rgba(0, 0, 0, .8);
-    border-bottom: 2px solid grey;
+    box-shadow: 0px -6px 2px 7px #ff4656;
 }
 
 /* nav */
