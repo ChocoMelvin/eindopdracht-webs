@@ -78,6 +78,8 @@ section#hero #hero-description{
     display: inline-block;
 }
 
+section#hero  #hero-description p{ padding-top: 15px; }
+
 /* news */
 section#news {
     margin-top: 15px;

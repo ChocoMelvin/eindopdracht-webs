@@ -15,6 +15,12 @@ body{
     background-color: #ece8e1DE;
 }
 
+/* Text Selection Style */
+*::selection{
+    color: #ff4656;
+    background: white;
+}
+
 /* header */
 header{
     background-color: rgba(0, 0, 0, .8);
