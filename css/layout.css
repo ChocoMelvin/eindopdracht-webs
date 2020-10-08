@@ -6,7 +6,7 @@ Probeer het gebruik van niet responsive units zoals px te vermijden.
 */
 
 /* global */
-* { padding: 0; margin: 0; box-sizing: border-box;} /* reset UA padding & margins */
+* { padding: 0; margin: 0; box-sizing: border-box; border: 0;} /* reset UA padding & margins */
 
 /* content wrapper */
 .container{
@@ -17,8 +17,6 @@ Probeer het gebruik van niet responsive units zoals px te vermijden.
 /* header */
 header{
     width: 100%;
-    /* ensure spacing between content and header */
-    margin-bottom: 20px;
 }
 
 /* nav */
@@ -49,18 +47,48 @@ nav li{
     justify-content: space-around;
     flex: auto;
     text-align: center;
-    line-height: 50px;
+    line-height: 65px;
+}
+
+nav #social-nav ul{
+    display: flex;
+    flex-direction: row;
+}
+
+nav #social-nav .social-logo{
+    width: 35px;
+    vertical-align: middle;
+}
+
+/* hero */
+section#hero video{
+    width: 100%;
+}
+
+section#hero{
+    text-align: center;
+    position: relative;
+}
+
+section#hero #hero-description{
+    position: absolute;
+    top: 30%;
+    left: 0;
+    width: 100%;
+    display: inline-block;
 }
 
 /* news */
-#news {
+section#news {
+    margin-top: 15px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
 }
 
-#news article{
-    padding: 0 20px 15px 0;
+section#news article{
+    padding-bottom: 25px;
+    padding-right: 20px;
 }
 
 /* responsiveness */
@@ -73,7 +101,8 @@ tablet (max 1024) en Desktop ( > 1024) aanpast.
 /* Phone Screens */
 @media only screen and (max-width: 480px) {
     /* make container fill entire page if screen is small */
-    .container { width: 90%;}
+    .container { width: 100%;}
+
     nav, nav ul{
         flex-direction: column;
     }
@@ -82,31 +111,66 @@ tablet (max 1024) en Desktop ( > 1024) aanpast.
         text-align: center;
         margin-top: 10px;
     }
+
+    section#news{
+        padding: 0 25px;
+    }
+
+    section#hero{
+        display: none;
+    }
+
+    nav #social-nav{
+        width: 90%;
+    }
 }
 
 /* Tablet Screens */
 @media only screen and (min-width: 480px) and (max-width: 1024px) {
     .container { width: 90%;}
 
-    /* set articles on tablet half width */
-    #news article{
+    nav, nav ul{
+        flex-direction: column;
+    }
+
+    nav #social-nav{
         width: 50%;
     }
+
+    /* override container width for hero */
+    section#hero { width: 100%; }
+
+    /* set articles on tablet half width */
+    section#news article{
+        width: 50%;
+    }
+
     /* set first child on tablet full width */
-    #news article:first-child{
-        width: 100%;
+    section#news article:nth-of-type(1){
+        width: 60%;
+    }
+
+    section#news article:nth-of-type(2){
+        width: 40%;
     }
 }
 
 /* Desktop Screens */
 @media only screen and (min-width: 1024px){
+    nav #social-nav{
+        margin-left: auto;
+        padding-right: 10px;
+    }
+
     /* set article 1/3rd width on desktop*/
-    #news article{
-        width: 33.3333%;
+    section#news article{
+        width: 33%;
     }
     
-    /* set first child 2/3rd width on desktop */
-    #news article:first-child{
-        width: 66.6666%;
+    /* technisch gezien styling maar we willen maar een plek voor media queries */
+    section#hero video{
+        border-bottom-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+        border: 1px solid black;
     }
 }
