@@ -1,3 +1,10 @@
+/*
+Alleen bedoelt voor responsiveness!
+Dus niet voor styling van text etc
+- Melvin
+*/
+
+
 /* content wrapper */
 .container{
     width: 80%;
@@ -22,7 +29,6 @@ tablet (max 1024) en Desktop ( > 1024) aanpast.
 }
 
 /* Desktop Screens */
-
 @media only screen and (min-width: 1024px){
     
 }
