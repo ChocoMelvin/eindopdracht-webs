@@ -137,6 +137,11 @@ tablet (max 1024) en Desktop ( > 1024) aanpast.
         width: 50%;
     }
 
+    nav #logo-container{
+        text-align: center;
+        margin-top: 10px;
+    }
+
     /* override container width for hero */
     section#hero { width: 100%; }
 
