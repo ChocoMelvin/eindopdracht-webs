@@ -8,6 +8,7 @@ Dus niet voor styling van text etc
 /* content wrapper */
 .container{
     width: 80%;
+    margin: 0 auto;
 }
 
 /* responsiveness */
@@ -20,12 +21,13 @@ tablet (max 1024) en Desktop ( > 1024) aanpast.
 
 /* Phone Screens */
 @media only screen and (max-width: 480px) {
-    
+    /* make container fill entire page if screen is small */
+    .container { width: 100%;}
 }
 
 /* Tablet Screens */
 @media only screen and (min-width: 480px) and (max-width: 1024px) {
-    
+    .container { width: 90%;}
 }
 
 /* Desktop Screens */
