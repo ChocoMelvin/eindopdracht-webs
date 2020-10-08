@@ -14,9 +14,28 @@ Probeer het gebruik van niet responsive units zoals px te vermijden.
     margin: 0 auto;
 }
 
+/* header */
+header{
+    width: 100%;
+    /* ensure spacing between content and header */
+    margin-bottom: 20px;
+}
+
 /* nav */
 nav{
     width: 100%;
+    display: flex;
+    /* ensure proper vertical alignment */
+    align-items: center;
+}
+
+nav #logo-container a{
+    padding: 0 10px;
+    display: inline-block;
+}
+
+nav #logo-container a svg{
+    vertical-align: middle;
 }
 
 nav ul{
@@ -30,15 +49,18 @@ nav li{
     justify-content: space-around;
     flex: auto;
     text-align: center;
+    line-height: 50px;
 }
 
+/* news */
+#news {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
 
-/* footer */
-footer{
-    width: 100%;
-    height: 4vh;
-    position: fixed;
-    bottom:0;
+#news article{
+    padding: 0 20px 15px 0;
 }
 
 /* responsiveness */
@@ -51,15 +73,40 @@ tablet (max 1024) en Desktop ( > 1024) aanpast.
 /* Phone Screens */
 @media only screen and (max-width: 480px) {
     /* make container fill entire page if screen is small */
-    .container { width: 100%;}
+    .container { width: 90%;}
+    nav, nav ul{
+        flex-direction: column;
+    }
+
+    nav #logo-container{
+        text-align: center;
+        margin-top: 10px;
+    }
 }
 
 /* Tablet Screens */
 @media only screen and (min-width: 480px) and (max-width: 1024px) {
-    .container { width: 95%;}
+    .container { width: 90%;}
+
+    /* set articles on tablet half width */
+    #news article{
+        width: 50%;
+    }
+    /* set first child on tablet full width */
+    #news article:first-child{
+        width: 100%;
+    }
 }
 
 /* Desktop Screens */
 @media only screen and (min-width: 1024px){
+    /* set article 1/3rd width on desktop*/
+    #news article{
+        width: 33.3333%;
+    }
     
+    /* set first child 2/3rd width on desktop */
+    #news article:first-child{
+        width: 66.6666%;
+    }
 }
