@@ -10,6 +10,9 @@ zelf te bepalen maar moet wel substantieel anders zijn dan de voorgaande Tekstpa
 */
 
 /* global styles */
+/* reset general list styles */
+li { list-style-type: none;}
+
 body {
   font-family: sans-serif;
   background-color: #ece8e1de;
@@ -35,7 +38,6 @@ header {
 
 nav ul {
   /* remove dot listing */
-  list-style: none;
   margin: 0;
   padding: 0;
 }
@@ -108,3 +110,63 @@ nav ul.dropdown-menu {
 #news article > p.author:before {
   content: "- ";
 }
+
+
+/* Contact Form */
+#contactform{
+    background-color: #302f2e;
+    border-top: 1px solid white;
+}
+
+#contactform h1{
+    color: white;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+ #contactform button{
+     padding: 5px 20px;
+ }
+
+ #contactform input {
+     background: none;
+     border-bottom: 1px solid #ff4656;
+     color: white;
+     padding-bottom: 2px;
+ }
+
+ #contactform .form-radio{
+    color: white;
+}
+
+ #contactform input::placeholder{
+     color: rgb(202, 202, 202);
+ }
+
+ #contactform textarea{
+     padding: 5px;
+     background-color: rgba(200,200,200, .8);
+     color: white;
+     border-radius: 5px;
+ }
+
+ #contactform input:focus{
+        border-bottom: 1px solid orange;
+        outline: none;
+ }
+
+ #contactform textarea:focus{
+     outline: none;
+ }
+
+ #contactform button{
+     border-radius: 10px;
+     font-weight: bold;
+     background-color: rgba(200,200,200, .8);
+     color: rgb(30, 30, 30);
+ }
+
+ #contactform button:hover{
+     color: white;
+     background-color: rgba(150,150,150,.8);
+ }

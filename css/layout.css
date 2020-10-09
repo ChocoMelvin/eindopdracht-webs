@@ -15,17 +15,17 @@ Probeer het gebruik van niet responsive units zoals px te vermijden.
   border: 0;
 }
 
-/* ensure spacing between sections */
-section {
-  margin: 15px 0;
-}
-
 /* content wrapper */
 .container {
   /* Default Container width */
   width: 80%;
   /* pull to the center */
   margin: 0 auto;
+}
+
+/* ensure spacing between sections */
+section {
+    margin: 15px auto;
 }
 
 /* header */
@@ -126,6 +126,41 @@ nav ul.dropdown-menu {
   padding-right: 20px;
 }
 
+/* contact form */
+
+#contactform ul,
+#contactform form,
+#contactform div{
+    display: flex;
+}
+
+#contactform form, #contactform ul{
+    flex-direction: column;
+}
+
+#contactform ul li{
+    padding: 20px 10px;
+    width: 100%;
+    text-align: left;
+}
+
+#contactform{
+    padding: 30px 50px;
+    width: 75%;
+}
+
+#contactform ul li input[type="text"]{ width: 100%; }
+
+/* center form */
+#contactform form{
+    margin: auto;
+    width: 80%;
+}
+
+#contactform textarea, #contactform li > textarea{
+    width: 100%;
+}
+
 /* responsiveness | MEDIA QUERIES */
 /* Rubric: Hanteer 2 breakpoints:  480px en 1024px. */
 
@@ -193,6 +228,30 @@ nav ul.dropdown-menu {
   nav #social-nav {
     width: 90%;
   }
+
+  /* Contact Form */
+
+  #contactform .form-name{
+    flex-direction: column;
+  }
+
+  /* set everything full width */
+  #contactform,
+  #contactform ul li,
+  #contactform ul li input[type="text"],
+  #contactform ul li textarea
+  {
+    width: 100%;
+  }
+
+  #contactform{
+      padding: 20px 0;
+  }
+
+  #contactform .form-radio{
+      flex-direction: column;
+  }
+
 }
 
 /* Tablet Screens */
@@ -258,6 +317,12 @@ nav ul.dropdown-menu {
   #news article:nth-of-type(2) {
     width: 40%;
   }
+
+  /* Contact Form */
+
+  #contactform{
+      width: 100%;
+  }
 }
 
 /* Desktop Screens */
@@ -302,5 +367,11 @@ nav ul.dropdown-menu {
   nav:hover #valorant-logo {
     fill: #ff0000;
     transition: 0.2s ease-out;
+  }
+
+  /* Contact Form */
+  #contactform{
+    margin-top: 30px;
+    border: none;
   }
 }
