@@ -52,6 +52,10 @@ nav ul li a:hover {
     color: #ff4656;
 }
 
+nav ul.dropdown-menu{
+    border-top: 1px solid red;
+}
+
 /* hero */
 section#hero {
     z-index: -9999;
