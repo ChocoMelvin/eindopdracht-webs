@@ -170,6 +170,8 @@ tablet (max 1024) en Desktop ( > 1024) aanpast.
         border-bottom: 1px solid black;
     }
 
+    
+
     nav ul.dropdown-menu li:last-child{
         border: none;
     }
