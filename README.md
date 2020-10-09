@@ -5,7 +5,7 @@
 
 ### Voldaan
 - Responsive
-  - Responsive Navigatie menu (Student uitleg)
+  - Responsive Navigatie menu (Student uitleg) [1.5]
 
 
 ### Knockout Criteria
