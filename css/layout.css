@@ -44,8 +44,7 @@ nav {
 /* flex alignment of nav */
 nav #menu-container,
 nav #social-nav ul,
-nav ul,
-#news {
+nav ul{
   display: flex;
 }
 /* Align the menu horizontally be default */
@@ -117,6 +116,7 @@ nav ul.dropdown-menu {
 
 /* news */
 #news {
+  display: flex;
   flex-wrap: wrap;
   flex-direction: row;
 }
