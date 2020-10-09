@@ -6,71 +6,78 @@ Probeer het gebruik van niet responsive units zoals px te vermijden.
 */
 
 /* global */
-* { padding: 0; margin: 0; box-sizing: border-box; border: 0;} /* reset UA padding & margins */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: 0;
+}
+
+/* reset UA padding & margins */
 
 /* content wrapper */
-.container{
+.container {
     width: 80%;
     margin: 0 auto;
 }
 
 /* header */
-header{
+header {
     width: 100%;
 }
 
 /* nav */
-nav{
+nav {
     width: 100%;
     display: flex;
     /* ensure proper vertical alignment */
     align-items: center;
 }
 
-nav #logo-container a{
+nav #logo-container a {
     padding: 0 10px;
     display: inline-block;
 }
 
-nav #logo-container a svg{
+nav #logo-container a svg {
     vertical-align: middle;
 }
 
-nav ul{
+nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
 }
 
-nav li{
+nav li {
     justify-content: space-around;
     flex: auto;
     text-align: center;
     line-height: 65px;
 }
 
-nav #social-nav ul{
+nav #social-nav ul {
     display: flex;
     flex-direction: row;
 }
 
-nav #social-nav .social-logo{
+nav #social-nav .social-logo {
     width: 35px;
     vertical-align: middle;
 }
 
 /* hero */
-section#hero video{
+section#hero video {
     width: 100%;
 }
 
-section#hero{
+section#hero {
     text-align: center;
     position: relative;
 }
 
-section#hero #hero-description{
+section#hero #hero-description {
     position: absolute;
     top: 30%;
     left: 0;
@@ -86,7 +93,7 @@ section#news {
     flex-direction: row;
 }
 
-section#news article{
+section#news article {
     padding-bottom: 25px;
     padding-right: 20px;
 }
@@ -100,80 +107,105 @@ tablet (max 1024) en Desktop ( > 1024) aanpast.
 
 /* Phone Screens */
 @media only screen and (max-width: 480px) {
-    /* make container fill entire page if screen is small */
-    .container { width: 100%;}
 
-    nav, nav ul{
+    /* make container fill entire page if screen is small */
+    .container {
+        width: 100%;
+    }
+
+    /* nav */
+
+    nav,
+    nav ul {
         flex-direction: column;
     }
 
-    nav #logo-container{
+    nav #logo-container {
         text-align: center;
         margin-top: 10px;
     }
 
-    section#news{
+    /* news */
+
+    section#news {
         padding: 0 25px;
     }
 
-    section#hero{
+    /* hero */
+
+    /* We can't show the hero on phone
+       Nobody wants a video on the main page on the phone
+    */
+    section#hero {
         display: none;
     }
 
-    nav #social-nav{
+    nav #social-nav {
         width: 90%;
     }
 }
 
 /* Tablet Screens */
 @media only screen and (min-width: 480px) and (max-width: 1024px) {
-    .container { width: 90%;}
+    .container {
+        width: 90%;
+    }
 
-    nav, nav ul{
+    /* nav */
+    nav,
+    nav ul {
         flex-direction: column;
     }
 
-    nav #social-nav{
+    nav #social-nav {
         width: 50%;
     }
 
-    nav #logo-container{
+    nav #logo-container {
         text-align: center;
         margin-top: 10px;
     }
 
+    /* hero */
     /* override container width for hero */
-    section#hero { width: 100%; }
+    section#hero {
+        width: 100%;
+    }
 
+    /* news */
     /* set articles on tablet half width */
-    section#news article{
+    section#news article {
         width: 50%;
     }
 
     /* set first child on tablet full width */
-    section#news article:nth-of-type(1){
+    section#news article:nth-of-type(1) {
         width: 60%;
     }
 
-    section#news article:nth-of-type(2){
+    section#news article:nth-of-type(2) {
         width: 40%;
     }
 }
 
 /* Desktop Screens */
-@media only screen and (min-width: 1024px){
-    nav #social-nav{
+@media only screen and (min-width: 1024px) {
+
+    /* nav*/
+    /* pull social-nav to the right on desktop screens */
+    nav #social-nav {
         margin-left: auto;
         padding-right: 10px;
     }
 
+    /* news */
     /* set article 1/3rd width on desktop*/
-    section#news article{
+    section#news article {
         width: 33%;
     }
-    
+
     /* technisch gezien styling maar we willen maar een plek voor media queries */
-    section#hero video{
+    section#hero video {
         border-bottom-right-radius: 15px;
         border-bottom-left-radius: 15px;
         border: 1px solid black;

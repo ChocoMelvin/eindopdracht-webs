@@ -10,13 +10,13 @@ zelf te bepalen maar moet wel substantieel anders zijn dan de voorgaande Tekstpa
 */
 
 /* global styles */
-body{
+body {
     font-family: sans-serif;
     background-color: #ece8e1DE;
 }
 
 /* header */
-header{
+header {
     background-color: rgba(0, 0, 0, .8);
     box-shadow: 0 1px 3px 1px #000;
 }
@@ -33,31 +33,31 @@ nav ul li a {
     text-align: center;
 }
 
-#valorant-logo{
+#valorant-logo {
     fill: #ff4656;
 }
 
-nav:hover #valorant-logo{
+nav:hover #valorant-logo {
     fill: #ff0000;
     transition: .2s ease-out;
 }
 
-nav ul li a:hover{
+nav ul li a:hover {
     color: #ff4656;
 }
 
 /* hero */
-section#hero{
+section#hero {
     z-index: -9999;
 }
 
-section#hero h1{
+section#hero h1 {
     font-size: 6vw;
     color: #fff;
     text-shadow: 2px 2px #ff4656;
 }
 
-section#hero p{
+section#hero p {
     font-size: 20px;
     color: #fff;
     text-shadow: 2px 1px #000;
@@ -65,31 +65,31 @@ section#hero p{
 
 /* articles */
 
-section#news article > h1 {
+section#news article>h1 {
     font-size: 25px;
     padding-bottom: 6px;
 }
 
-section#news article > h1 a {
+section#news article>h1 a {
     color: #2b2b2b;
     text-decoration: none;
 }
 
-section#news article > h1 a:hover {
+section#news article>h1 a:hover {
     color: #ff4656;
 }
 
-section#news article > p {
+section#news article>p {
     font-size: 16px;
     white-space: pre-line;
 }
 
-section#news article > p.author{
+section#news article>p.author {
     padding-top: 15px;
     font-style: italic;
     color: grey;
 }
 
-section#news article > p.author:before{
+section#news article>p.author:before {
     content: '- ';
 }
