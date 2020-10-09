@@ -187,8 +187,12 @@ nav ul.dropdown-menu {
   /* We can't show the hero on phone
        Nobody wants a video on the main page on the phone
     */
-  #hero { display: none; }
-  nav #social-nav { width: 90%; }
+  #hero {
+    display: none;
+  }
+  nav #social-nav {
+    width: 90%;
+  }
 }
 
 /* Tablet Screens */
