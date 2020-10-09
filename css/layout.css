@@ -364,14 +364,15 @@ nav ul.dropdown-menu {
     padding: 0 20px;
   }
 
-  nav:hover #valorant-logo {
-    fill: #ff0000;
-    transition: 0.2s ease-out;
+  nav:hover #valorant-logo-right {
+    fill: rgb(240, 178, 64);
+    transition: 0.3s;
   }
 
   /* Contact Form */
   #contactform{
     margin-top: 30px;
     border: none;
+    border-radius: 10px;
   }
 }
