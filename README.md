@@ -1,13 +1,22 @@
 
-# Valorant (schoolproject webs1)
+# Valorant WEBS1
 
 # Criteria
 **[Algemene Criteria](https://docs.google.com/spreadsheets/d/e/2PACX-1vQCqdVHo8z8lBxfYn5C067lJcex97CyNOlBzU7jngfFC1KdIPaN10csXVt8Q5kZKlBy60C0zf48auSN/pubhtml)**
 
 ### Voldaan
 - Responsive
-  - Responsive Navigatie menu (Student uitleg) [1.5]
-
+  - [x] Responsive Navigatie menu (Student uitleg) [1.5]
+  - [ ] Responsiveness Pagina's (Docent controle) [1.5]
+ - Code Quality
+	 - [ ] HTML Structuur & Tags (Docent controle) [1]
+	 - [ ] CSS Structuur & Classes (Student uitleg) [1]
+	 - [ ] CSS Selectors & Properties (Student Uitleg) [1]
+- Functionaliteit | Design
+	- [ ] Visuele oplossingen (Docent controle)
+	- [ ] Responsive Webformulier (Student uitleg)
+	- [ ] Design Webformulier (Docent controle)
+	- [ ] Animatie (Student uitleg)
 
 ### Knockout Criteria
 - [ ] De website heeft tenminste 5 webpagina's welke een significant andere layout/structuur hebben EN minimaal 1 webformulier
