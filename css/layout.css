@@ -6,305 +6,297 @@ Probeer het gebruik van niet responsive units zoals px te vermijden.
 */
 
 /* global */
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    border: 0;
-}
 
 /* reset UA padding & margins */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: 0;
+}
+
+/* ensure spacing between sections */
+section {
+  margin: 15px 0;
+}
 
 /* content wrapper */
 .container {
-    width: 80%;
-    margin: 0 auto;
+  /* Default Container width */
+  width: 80%;
+  /* pull to the center */
+  margin: 0 auto;
 }
 
 /* header */
 header {
-    width: 100%;
+  width: 100%;
 }
 
 /* nav */
 nav {
-    width: 100%;
-    display: flex;
-    /* ensure proper vertical alignment */
-    align-items: center;
+  width: 100%;
+  display: flex;
+  /* ensure proper vertical alignment */
+  align-items: center;
 }
 
-nav #menu-container{
-    display: flex;
-}
-
-nav #menu-container ul{
-    flex-direction: row;
-}
-
-nav #logo-container a {
-    padding: 0 30px;
-    display: inline-block;
-}
-
-nav #logo-container a svg {
-    vertical-align: middle;
-}
-
+/* flex alignment of nav */
+nav #menu-container,
+nav #social-nav ul,
 nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
+  display: flex;
+}
+/* Align the menu horizontally be default */
+nav #menu-container ul,
+nav #social-nav ul {
+  flex-direction: row;
+}
+/* Vertically center logo's  */
+nav #logo-container a svg,
+nav #social-nav .social-logo {
+  vertical-align: middle;
 }
 
 nav li {
-    justify-content: space-around;
-    flex: auto;
-    text-align: center;
-    line-height: 65px;
+  /* make sure the space around the elements is equal */
+  justify-content: space-around;
+  /* Default */
+  flex: auto;
+}
+
+nav #logo-container a {
+  padding: 0 30px;
+  display: inline-block;
+}
+
+nav li {
+  text-align: center;
+  line-height: 65px;
 }
 
 /* improve clickable area */
 nav li a {
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
-
-nav #social-nav ul {
-    display: flex;
-    flex-direction: row;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 nav #social-nav .social-logo {
-    width: 35px;
-    vertical-align: middle;
+  width: 35px;
 }
 
 /* nav dropdown */
-nav ul.dropdown-menu{
-    display:none;
+
+/* don't show dropdown by default */
+nav ul.dropdown-menu {
+  display: none;
 }
 
 /* hero */
-section#hero video {
-    width: 100%;
+#hero video {
+  width: 100%;
 }
 
-section#hero {
-    text-align: center;
-    position: relative;
+#hero {
+  text-align: center;
+  position: relative;
 }
 
-section#hero #hero-description {
-    position: absolute;
-    top: 30%;
-    left: 0;
-    width: 100%;
-    display: inline-block;
+#hero #hero-description {
+  position: absolute;
+  top: 30%;
+  left: 0;
+  width: 100%;
+  display: inline-block;
 }
 
-section#hero  #hero-description p{ padding-top: 15px; }
+#hero #hero-description p {
+  padding-top: 15px;
+}
 
 /* news */
-section#news {
-    margin-top: 15px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+#news {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 
-section#news article {
-    padding-bottom: 25px;
-    padding-right: 20px;
+#news article {
+  padding-bottom: 25px;
+  padding-right: 20px;
 }
 
-/* responsiveness */
-/* Rubric:
-Hanteer 2 breakpoints:  480px en 1024px.
-Dit zorgt ervoor dat je de website op Mobiel (max 480),
-tablet (max 1024) en Desktop ( > 1024) aanpast. 
-*/
+/* responsiveness | MEDIA QUERIES */
+/* Rubric: Hanteer 2 breakpoints:  480px en 1024px. */
 
 /* Phone Screens */
 @media only screen and (max-width: 480px) {
+  /* make container fill entire page if screen is small */
+  .container {
+    width: 100%;
+  }
 
-    /* make container fill entire page if screen is small */
-    .container {
-        width: 100%;
-    }
+  /* nav */
 
-    /* nav */
+  nav,
+  nav ul {
+    flex-direction: column;
+  }
 
-    nav,
-    nav ul {
-        flex-direction: column;
-    }
+  nav #menu-container {
+    width: 100%;
+  }
 
-    nav #menu-container{
-        width: 100%;
-    }
+  nav #menu-container ul {
+    flex-direction: column;
+  }
 
-    nav #menu-container ul{
-        flex-direction: column;
-    }
+  nav #logo-container {
+    text-align: center;
+    margin-top: 10px;
+  }
 
-    nav #logo-container {
-        text-align: center;
-        margin-top: 10px;
-    }
+  nav ul {
+    width: 100%;
+  }
 
-    nav ul{
-        width: 100%;
-    }
-    
-    nav ul.dropdown-menu{
-        display: block;
-        width: 100%;
-        margin: 0 auto;
-    }
+  nav ul.dropdown-menu {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+  }
 
-    nav ul.dropdown-menu li{
-        width: 100%;
-        background-color: grey;
-        border-bottom: 1px solid black;
-    }
+  nav ul.dropdown-menu li {
+    width: 100%;
+    background-color: grey;
+    border-bottom: 1px solid black;
+  }
 
-    
+  nav ul.dropdown-menu li:last-child {
+    border: none;
+  }
 
-    nav ul.dropdown-menu li:last-child{
-        border: none;
-    }
+  /* news */
 
-    /* news */
+  #news {
+    padding: 0 25px;
+  }
 
-    section#news {
-        padding: 0 25px;
-    }
+  /* hero */
 
-    /* hero */
-
-    /* We can't show the hero on phone
+  /* We can't show the hero on phone
        Nobody wants a video on the main page on the phone
     */
-    section#hero {
-        display: none;
-    }
-
-    nav #social-nav {
-        width: 90%;
-    }
+  #hero { display: none; }
+  nav #social-nav { width: 90%; }
 }
 
 /* Tablet Screens */
 @media only screen and (min-width: 480px) and (max-width: 1024px) {
-    .container {
-        width: 90%;
-    }
+  .container {
+    width: 90%;
+  }
 
-    /* nav */
-    nav,
-    nav ul {
-        flex-direction: column;
-    }
+  /* nav */
+  nav,
+  nav ul {
+    flex-direction: column;
+  }
 
-    nav #social-nav {
-        width: 50%;
-    }
+  nav #social-nav {
+    width: 50%;
+  }
 
-    nav #logo-container {
-        text-align: center;
-        margin-top: 10px;
-    }
+  nav #logo-container {
+    text-align: center;
+    margin-top: 10px;
+  }
 
-    nav ul li:hover > ul.dropdown-menu {
-        display: block;
-        position: absolute;
-        background-color: #4c4c4c;
-        z-index: 9999;
-        margin-left: -100px;
-    }
+  nav ul li:hover > ul.dropdown-menu {
+    display: block;
+    position: absolute;
+    background-color: #4c4c4c;
+    z-index: 9999;
+    margin-left: -100px;
+  }
 
-    /* improve clickable area */
-    nav ul li:hover > ul.dropdown-menu a {
-        padding: 15px 100px;
-    }
+  /* improve clickable area */
+  nav ul li:hover > ul.dropdown-menu a {
+    padding: 15px 100px;
+  }
 
-    nav ul li ul.dropdown-menu li {
-        border-bottom: 1px solid white;
-        display: block;
-    }
+  nav ul li ul.dropdown-menu li {
+    border-bottom: 1px solid white;
+    display: block;
+  }
 
-    nav ul li ul.dropdown-menu li:last-child{
-        border-bottom: 0;
-    }
+  nav ul li ul.dropdown-menu li:last-child {
+    border-bottom: 0;
+  }
 
-    /* hero */
-    /* override container width for hero */
-    section#hero {
-        width: 100%;
-    }
+  /* hero */
+  /* override container width for hero */
+  #hero {
+    width: 100%;
+  }
 
-    /* news */
-    /* set articles on tablet half width */
-    section#news article {
-        width: 50%;
-    }
+  /* news */
+  /* set articles on tablet half width */
+  #news article {
+    width: 50%;
+  }
 
-    /* set first child on tablet full width */
-    section#news article:nth-of-type(1) {
-        width: 60%;
-    }
+  /* set first child on tablet full width */
+  #news article:nth-of-type(1) {
+    width: 60%;
+  }
 
-    section#news article:nth-of-type(2) {
-        width: 40%;
-    }
-
-    
+  #news article:nth-of-type(2) {
+    width: 40%;
+  }
 }
 
 /* Desktop Screens */
 @media only screen and (min-width: 1024px) {
+  /* nav*/
+  /* pull social-nav to the right on desktop screens */
+  nav #social-nav {
+    margin-left: auto;
+    padding-right: 10px;
+  }
 
-    /* nav*/
-    /* pull social-nav to the right on desktop screens */
-    nav #social-nav {
-        margin-left: auto;
-        padding-right: 10px;
-    }
+  /* news */
+  /* set article 1/3rd width on desktop*/
+  #news article {
+    width: 33%;
+  }
 
-    /* news */
-    /* set article 1/3rd width on desktop*/
-    section#news article {
-        width: 33%;
-    }
+  nav ul li ul.dropdown-menu li {
+    border-bottom: 1px solid white;
+  }
 
-    nav ul li ul.dropdown-menu li {
-        border-bottom: 1px solid white;
-    }
+  nav ul li ul.dropdown-menu li:last-child {
+    border-bottom: 0;
+  }
 
-    nav ul li ul.dropdown-menu li:last-child{
-        border-bottom: 0;
-    }
+  /* technisch gezien styling maar we willen maar een plek voor media queries */
+  #hero video {
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border: 1px solid black;
+  }
 
-    /* technisch gezien styling maar we willen maar een plek voor media queries */
-    section#hero video {
-        border-bottom-right-radius: 15px;
-        border-bottom-left-radius: 15px;
-        border: 1px solid black;
-    }
+  nav ul li:hover > ul.dropdown-menu {
+    display: block;
+    position: absolute;
+    background-color: #4c4c4c;
+    z-index: 9999;
+    margin-left: -25px;
+    padding: 0 20px;
+  }
 
-    nav ul li:hover > ul.dropdown-menu {
-        display: block;
-        position: absolute;
-        background-color: #4c4c4c;
-        z-index: 9999;
-        margin-left: -25px;
-        padding: 0 20px;
-    }
-
-    nav:hover #valorant-logo {
-        fill: #ff0000;
-        transition: .2s ease-out;
-    }
+  nav:hover #valorant-logo {
+    fill: #ff0000;
+    transition: 0.2s ease-out;
+  }
 }
