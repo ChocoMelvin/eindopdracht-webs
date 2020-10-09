@@ -34,6 +34,14 @@ nav {
     align-items: center;
 }
 
+nav #menu-container{
+    display: flex;
+}
+
+nav #menu-container ul{
+    flex-direction: row;
+}
+
 nav #logo-container a {
     padding: 0 30px;
     display: inline-block;
@@ -127,6 +135,14 @@ tablet (max 1024) en Desktop ( > 1024) aanpast.
         flex-direction: column;
     }
 
+    nav #menu-container{
+        width: 100%;
+    }
+
+    nav #menu-container ul{
+        flex-direction: column;
+    }
+
     nav #logo-container {
         text-align: center;
         margin-top: 10px;
@@ -193,6 +209,15 @@ tablet (max 1024) en Desktop ( > 1024) aanpast.
         margin-top: 10px;
     }
 
+    nav ul li:hover > ul.dropdown-menu {
+        display: block;
+        position: absolute;
+        background-color: #4c4c4c;
+        z-index: 9999;
+        margin-left: -25px;
+        padding: 0 20px;
+    }
+
     /* hero */
     /* override container width for hero */
     section#hero {
@@ -213,6 +238,8 @@ tablet (max 1024) en Desktop ( > 1024) aanpast.
     section#news article:nth-of-type(2) {
         width: 40%;
     }
+
+    
 }
 
 /* Desktop Screens */
@@ -253,5 +280,10 @@ tablet (max 1024) en Desktop ( > 1024) aanpast.
         z-index: 9999;
         margin-left: -25px;
         padding: 0 20px;
+    }
+
+    nav:hover #valorant-logo {
+        fill: #ff0000;
+        transition: .2s ease-out;
     }
 }

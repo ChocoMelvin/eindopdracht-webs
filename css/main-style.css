@@ -43,12 +43,7 @@ nav ul li a {
     fill: #ff4656;
 }
 
-nav:hover #valorant-logo {
-    fill: #ff0000;
-    transition: .2s ease-out;
-}
-
-nav ul li a:hover {
+nav ul li:hover > a{
     color: #ff4656;
 }
 
