@@ -65,6 +65,12 @@ nav li {
     line-height: 65px;
 }
 
+/* improve clickable area */
+nav li a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
 nav #social-nav ul {
     display: flex;
     flex-direction: row;
@@ -214,8 +220,21 @@ tablet (max 1024) en Desktop ( > 1024) aanpast.
         position: absolute;
         background-color: #4c4c4c;
         z-index: 9999;
-        margin-left: -25px;
-        padding: 0 20px;
+        margin-left: -100px;
+    }
+
+    /* improve clickable area */
+    nav ul li:hover > ul.dropdown-menu a {
+        padding: 15px 100px;
+    }
+
+    nav ul li ul.dropdown-menu li {
+        border-bottom: 1px solid white;
+        display: block;
+    }
+
+    nav ul li ul.dropdown-menu li:last-child{
+        border-bottom: 0;
     }
 
     /* hero */
