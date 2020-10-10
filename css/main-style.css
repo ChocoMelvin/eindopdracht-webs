@@ -113,6 +113,12 @@ nav ul.dropdown-menu {
   content: "- ";
 }
 
+#news #news-title{
+    font-size: 3rem;
+    color: #ff4656;
+    text-shadow: 1px 1px 1px black;
+}
+
 
 /* Contact Form */
 #contactform{

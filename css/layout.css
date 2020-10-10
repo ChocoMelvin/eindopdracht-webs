@@ -43,7 +43,11 @@ header {
   width: 100%;
 }
 
-
+.container #news-title{
+    text-align: center;
+    width: 100%;
+    padding: 20px 0;
+}
 
 
 
@@ -182,6 +186,8 @@ nav li:hover .dropdown-menu{
 #contactform{
     padding: 30px 50px;
     width: 75%;
+    display: flex;
+    justify-content: center;
 }
 
 #contactform ul li input[type="text"]{ width: 100%; }
