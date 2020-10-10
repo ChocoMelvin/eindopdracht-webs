@@ -220,7 +220,6 @@ nav li:hover .dropdown-menu{
 
 #hero-shutter .hero-slide{
     display: flex;
-    width: 100%;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -483,4 +482,8 @@ nav li:hover .dropdown-menu{
   #hero-shutter .hero-slide:last-child{
     border-right: none;
   }
+
+  #hero-shutter .hero-slide:hover{
+    width: 35%;
+}
 }
