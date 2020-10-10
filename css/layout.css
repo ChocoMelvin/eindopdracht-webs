@@ -450,8 +450,6 @@ nav li:hover .dropdown-menu {
   #news article{
     padding: 20px 30px;
     margin-bottom: 0;
-    border-bottom: 1px solid white;
-
     /* reset min-height for phones */
     min-height: auto;
   }

@@ -88,11 +88,12 @@ nav ul.dropdown-menu {
 }
 
 #news article h1 a:hover{
-  color: rgb(240, 178, 64);
+  color:#dc2c3bd5;
 }
 
 #news article{
   background-color: rgba(100,100,100, .2);
+  border-radius: 5px;
 }
 
 #news #valstrike-article{
