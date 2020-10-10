@@ -106,6 +106,12 @@ nav #social-nav .social-logo {
 /* don't show dropdown by default */
 nav ul.dropdown-menu {
   display: none;
+  background-color: #4c4c4c;
+  z-index: 9999;
+}
+
+nav li:hover .dropdown-menu{
+    display: block;
 }
 
 
@@ -270,7 +276,6 @@ nav ul.dropdown-menu {
   }
 
   nav ul.dropdown-menu {
-    display: block;
     width: 100%;
     margin: 0 auto;
   }
@@ -356,8 +361,7 @@ nav ul.dropdown-menu {
     margin-top: 10px;
   }
 
-  nav ul li:hover > ul.dropdown-menu {
-    display: block;
+  nav ul li > ul.dropdown-menu {
     position: absolute;
     background-color: #4c4c4c;
     z-index: 9999;
@@ -433,13 +437,14 @@ nav ul.dropdown-menu {
     border: 1px solid black;
   }
 
-  nav ul li:hover > ul.dropdown-menu {
-    display: block;
+  nav ul li > ul.dropdown-menu {
     position: absolute;
-    background-color: #4c4c4c;
-    z-index: 9999;
     margin-left: -25px;
     padding: 0 20px;
+  }
+
+  nav ul.dropdown-menu {
+    border-top: none !important;
   }
 
   nav:hover #valorant-logo-right {
