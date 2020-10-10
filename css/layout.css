@@ -464,6 +464,11 @@ nav li:hover .dropdown-menu {
     width: 90%;
   }
 
+  /* force fullwidth regardless of container size */
+  .fullwidth-tablet{
+    width: 100%;
+  }
+
   /* nav */
   nav,
   nav ul {

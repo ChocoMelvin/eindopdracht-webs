@@ -98,6 +98,12 @@ nav ul.dropdown-menu {
 
 #news #valstrike-article{
   background-image: url(../assets/images/Val1stStrike.png);
+  background-position: right top;
+}
+
+#news #raze-article{
+  background-image: url(../assets/images/Banner_RZE_JTT.jpg);
+  background-position: center top;
 }
 
 /* featured news */
