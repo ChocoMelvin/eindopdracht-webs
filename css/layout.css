@@ -32,7 +32,7 @@ body {
   /* Default Container width */
   width: 80%;
   /* pull to the center */
-  align-self: center;
+  margin: 0 auto;
 }
 
 /* ensure spacing between sections */
