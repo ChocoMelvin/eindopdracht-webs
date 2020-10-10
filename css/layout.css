@@ -177,7 +177,7 @@ nav li:hover .dropdown-menu {
 #news article{
   padding: 20px 30px;
   margin-bottom: 30px;
-  min-height: 200px;
+  min-height: 300px;
 
   /* vertically align the article if there's space left */
   justify-content: space-around;
@@ -185,6 +185,7 @@ nav li:hover .dropdown-menu {
 
 /* make use of wrapping to get title on top */
 #news article h1{
+  font-size: 1.8rem;
   padding-bottom: 15px;
 }
 
@@ -450,6 +451,9 @@ nav li:hover .dropdown-menu {
     padding: 20px 30px;
     margin-bottom: 0;
     border-bottom: 1px solid white;
+
+    /* reset min-height for phones */
+    min-height: auto;
   }
   /* reset news margin if on phone */
   #news{
