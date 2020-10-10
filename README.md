@@ -7,21 +7,21 @@
 ### Voldaan
 - Responsive
   - [x] Responsive Navigatie menu (Student uitleg) [1.5]
-  - [ ] Responsiveness Pagina's (Docent controle) [1.5]
+  - [x] Responsiveness Pagina's (Docent controle) [1.5] **TOT NU TOE | Check before submission **
  - Code Quality
 	 - [ ] HTML Structuur & Tags (Docent controle) [1]
 	 - [ ] CSS Structuur & Classes (Student uitleg) [1]
 	 - [ ] CSS Selectors & Properties (Student Uitleg) [1]
 - Functionaliteit | Design
 	- [ ] Visuele oplossingen (Docent controle)
-	- [ ] Responsive Webformulier (Student uitleg)
-	- [ ] Design Webformulier (Docent controle)
+	- [x] Responsive Webformulier (Student uitleg)
+	- [x] Design Webformulier (Docent controle) **??***
 	- [ ] Animatie (Student uitleg)
 
 ### Knockout Criteria
 - [ ] De website heeft tenminste 5 webpagina's welke een significant andere layout/structuur hebben EN minimaal 1 webformulier
 
-- [ ] De website bevat volwaardige content zodat alle beoordelingspunten zijn te testen. Geen 'blabla' maar een gegenereerde lorem ipsum mag wel.
+- [x] De website bevat volwaardige content zodat alle beoordelingspunten zijn te testen. Geen 'blabla' maar een gegenereerde lorem ipsum mag wel. ***Check Before Submissions***
 
 - [x] Je hebt een website met meerdere HTML bestanden en minimaal 1 CSS bestand en maximaal 3 CSS bestanden **Check before sumissions**
 
