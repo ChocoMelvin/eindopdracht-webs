@@ -220,6 +220,11 @@ p.author:before {
   transition: 0.4s;
 }
 
+/* it's half wrappable so we can use odd here to only get the middle border */
+#hero-shutter .hero-half-wrappable:nth-child(odd){
+  border-left: 1px solid white;
+}
+
 #hero-shutter .hero-slide:hover {
   /* Use a trick to set cover the background */
   box-shadow: inset 0 0 0 2000px rgba(34, 34, 34, 0.8);
