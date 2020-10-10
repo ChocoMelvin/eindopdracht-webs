@@ -15,15 +15,15 @@ zelf te bepalen maar moet wel substantieel anders zijn dan de voorgaande Tekstpa
 /* import roboto font */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-li {
-  list-style-type: none;
-}
-
 body {
   font-family: 'Roboto', sans-serif;
   background-color: #ece8e1de;
 }
 
+/* set all list to have no style type (dots) */
+li { list-style-type: none; }
+
+/* somehow color worked on other browsers intead of fill */
 #valorant-logo-left,
 #valorant-logo-right {
   fill: #ff4656;
@@ -81,36 +81,57 @@ nav ul.dropdown-menu {
   text-shadow: 2px 1px #000;
 }
 
-/* articles */
+/* news */
+#news article h1 a{
+  color: #ff4656;
+  text-decoration: none;
+}
 
-#news #news-title {
+#news article h1 a:hover{
+  color: rgb(240, 178, 64);
+}
+
+#news article{
+  background-color: rgba(100,100,100, .2);
+}
+
+#news #valstrike-article{
+  background-image: url(../assets/images/Val1stStrike.png);
+}
+
+/* featured news */
+
+/* shared */
+#news-title {
     font-size: 3rem;
     color: #ff4656;
     text-shadow: 1px 1px 1px black;
   }
 
-#news article > h1 {
+#featured-news article > h1 {
   font-size: 25px;
   /* ensure the header always has enough space to its paragraph */
   padding-bottom: 6px;
 }
 
-#news article > h1 a {
+#featured-news article > h1 a {
   color: #2b2b2b;
   text-decoration: none;
 }
 
-#news article > h1 a:hover {
+#featured-news article > h1 a:hover {
   color: #ff4656;
 }
 
 /* Ensure paragraph has line-wrapping */
-#news article > p {
+#featured-news article > p {
   font-size: 16px;
   white-space: pre-line;
 }
 
-#news article > p.author {
+
+/* shared between featured news and normal news */
+p.author {
   padding-top: 10px;
   padding-left: 10px;
   font-style: italic;
@@ -118,7 +139,7 @@ nav ul.dropdown-menu {
 }
 
 /* put a nice - in front of the authour tag */
-#news article > p.author:before {
+p.author:before {
   content: "- ";
 }
 

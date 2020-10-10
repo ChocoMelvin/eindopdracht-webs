@@ -37,7 +37,7 @@ body {
 
 /* ensure spacing between sections */
 section {
-  margin: 15px auto;
+  margin: auto auto;
 }
 
 /* header */
@@ -148,14 +148,84 @@ nav li:hover .dropdown-menu {
   padding-top: 15px;
 }
 
-/* news */
-#news {
+/* News */
+#news,
+#news article,
+#news article .article-content{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+#news article,
+#news article .article-content{
+  flex-direction: column;
+}
+
+/* Reverse the row and alight text for even articles */
+#news article:nth-child(even) .article-content{
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+/* pull other elements to the right as well */
+#news article:nth-child(even) {
+  align-items: flex-end;
+}
+
+/* half width for normal articles */
+#news article{
+  padding: 20px 30px;
+  margin-bottom: 30px;
+  min-height: 200px;
+
+  /* vertically align the article if there's space left */
+  justify-content: space-around;
+}
+
+/* make use of wrapping to get title on top */
+#news article h1{
+  padding-bottom: 15px;
+}
+
+#news article .article-content{
+  /* make sure it takes up all space if there's any left */
+  flex-grow: 3;
+}
+
+#news article .article-content p{
+  height: 100%;
+  width: 100%;
+  word-wrap: break-word;
+}
+
+#news .article-image{
+  height: 100%;
+  width: 30%;
+
+  background-size: cover;
+  background-position: center;
+}
+
+/* if article contains article image. Set the image to 30% */
+#news .article-content > .article-image{
+  width: 30%;
+}
+
+/* If the .article image has the general sibbling paragraph (the article text) set it to 70% */
+#news .article-content .article-image ~ p{
+  width: 70%;
+  padding: 0 15px;
+}
+
+/* Featured News */
+#featured-news {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
 }
 
-#news article {
+#featured-news article {
   padding-bottom: 25px;
   padding-right: 20px;
 }
@@ -292,13 +362,13 @@ nav li:hover .dropdown-menu {
     border: none;
   }
 
-  /* news */
+  /* Featured News */
 
-  #news {
+  #featured-news {
     padding: 0 25px;
   }
 
-  #news #news-title {
+  #featured-news #news-title {
     text-align: left;
   }
 
@@ -350,6 +420,41 @@ nav li:hover .dropdown-menu {
     display: block !important;
     opacity: 1 !important;
   }
+
+  /* news */
+
+  /* Reverse the row and alight text for even articles */
+  #news article:nth-child(even) .article-content{
+    flex-direction: row;
+    text-align: left;
+  }
+
+  /* pull other elements to the right as well */
+  #news article:nth-child(even) {
+    align-items: flex-start;
+  }
+
+  /* if article contains article image. Set the image to 30% */
+  #news .article-content > .article-image{
+    display: none;
+  }
+
+  /* If the .article image has the general sibbling paragraph (the article text) set it to 70% */
+  #news .article-content .article-image ~ p{
+    width: 100%;
+    padding: 0;
+  }
+
+    /* half width for normal articles */
+  #news article{
+    padding: 20px 30px;
+    margin-bottom: 0;
+    border-bottom: 1px solid white;
+  }
+  /* reset news margin if on phone */
+  #news{
+    margin: 0;
+  }
 }
 
 /* Tablet Screens */
@@ -400,14 +505,14 @@ nav li:hover .dropdown-menu {
     width: 100%;
   }
 
-  /* news */
+  /* featured news */
   /* set articles on tablet half width */
-  #news article {
+  #featured-news article {
     width: 50%;
   }
 
   /* set first child on tablet full width */
-  #news article:nth-of-type(1) {
+  #featured-news article:nth-of-type(1) {
     width: 100%;
   }
 
@@ -430,7 +535,7 @@ nav li:hover .dropdown-menu {
 
   /* news */
   /* set article 1/3rd width on desktop*/
-  #news article {
+  #featured-news article {
     width: 50%;
   }
 
