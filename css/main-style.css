@@ -11,12 +11,16 @@ zelf te bepalen maar moet wel substantieel anders zijn dan de voorgaande Tekstpa
 
 /* global styles */
 /* reset general list styles */
+
+/* import roboto font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 li {
   list-style-type: none;
 }
 
 body {
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
   background-color: #ece8e1de;
 }
 
