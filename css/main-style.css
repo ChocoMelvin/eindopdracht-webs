@@ -32,7 +32,7 @@ body {
 /* header */
 header {
   background-color: rgba(0, 0, 0, 0.8);
-  border-bottom: 2px solid #be0000;
+  border-bottom: 2px solid #ff4656;
 }
 
 /* nav */
@@ -117,7 +117,6 @@ nav ul.dropdown-menu {
 /* Contact Form */
 #contactform{
     background-color: #302f2e;
-    border-top: 1px solid white;
 }
 
 #contactform h1{
@@ -205,7 +204,6 @@ nav ul.dropdown-menu {
 
 #hero-shutter .hero-slide p{
     text-shadow: 1px 2px 1px #171717;
-    padding: 0 30px;
 }
 
 #hero-shutter .hero-slide a{
@@ -219,6 +217,7 @@ nav ul.dropdown-menu {
 }
 
 #hero-shutter .hero-slide article{
+    padding: 0 30px;
     display: none;
     opacity: 0;
 }
