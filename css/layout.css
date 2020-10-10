@@ -17,12 +17,12 @@ Probeer het gebruik van niet responsive units zoals px te vermijden.
   border: 0;
 }
 
-body{
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    height: 100%;
-    width: 100%;
+body {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
 
 /* content wrapper */
@@ -35,7 +35,7 @@ body{
 
 /* ensure spacing between sections */
 section {
-    margin: 15px auto;
+  margin: 15px auto;
 }
 
 /* header */
@@ -43,13 +43,11 @@ header {
   width: 100%;
 }
 
-.container #news-title{
-    text-align: center;
-    width: 100%;
-    padding: 20px 0;
+.container #news-title {
+  text-align: center;
+  width: 100%;
+  padding: 20px 0;
 }
-
-
 
 /*
     Navigation
@@ -64,7 +62,7 @@ nav {
 /* flex alignment of nav */
 nav #menu-container,
 nav #social-nav ul,
-nav ul{
+nav ul {
   display: flex;
 }
 /* Align the menu horizontally be default */
@@ -114,21 +112,20 @@ nav ul.dropdown-menu {
   z-index: 9999;
 }
 
-nav li:hover .dropdown-menu{
-    display: block;
+nav li:hover .dropdown-menu {
+  display: block;
 }
-
-
 
 /*
     Hero
 */
-#hero video, #hero img {
+#hero video,
+#hero img {
   width: 100%;
 }
 
-#hero img{
-    max-height: 350px;
+#hero img {
+  max-height: 350px;
 }
 
 #hero {
@@ -160,87 +157,83 @@ nav li:hover .dropdown-menu{
   padding-right: 20px;
 }
 
-
-
-
 /*
     Contact Form
 */
 
 #contactform ul,
 #contactform form,
-#contactform div{
-    display: flex;
+#contactform div {
+  display: flex;
 }
 
-#contactform form, #contactform ul{
-    flex-direction: column;
+#contactform form,
+#contactform ul {
+  flex-direction: column;
 }
 
-#contactform ul li{
-    padding: 20px 10px;
-    width: 100%;
-    text-align: left;
+#contactform ul li {
+  padding: 20px 10px;
+  width: 100%;
+  text-align: left;
 }
 
-#contactform{
-    padding: 30px 50px;
-    width: 75%;
-    display: flex;
-    justify-content: center;
+#contactform {
+  padding: 30px 50px;
+  width: 75%;
+  display: flex;
+  justify-content: center;
 }
 
-#contactform ul li input[type="text"]{ width: 100%; }
-
-#contactform form{
-    margin: auto;
-    width: 80%;
+#contactform ul li input[type="text"] {
+  width: 100%;
 }
 
-#contactform textarea, #contactform li > textarea{
-    width: 100%;
+#contactform form {
+  margin: auto;
+  width: 80%;
 }
 
-#contactform button{
-    padding: 15px 10px;
+#contactform textarea,
+#contactform li > textarea {
+  width: 100%;
 }
 
-
-
-
+#contactform button {
+  padding: 15px 10px;
+}
 
 /*
     About
 */
-#hero-shutter{
-    display: flex;
-    width: 100%;
-    flex-direction: column;
+#hero-shutter {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
 }
 
-#hero-shutter .hero-slide{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+#hero-shutter .hero-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 
-    height: 450px;
+  height: 450px;
 
-    border-bottom: 1px solid white;
+  border-bottom: 1px solid white;
 }
 
-#hero-shutter .hero-slide:last-child{
-    border-bottom: none;
+#hero-shutter .hero-slide:last-child {
+  border-bottom: none;
 }
 
-#about{
-    position: relative;
-    display: block;
-    width: 100%;
-    height: 100%;
-    text-align: center;
+#about {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
 }
-
 
 /* responsiveness | MEDIA QUERIES */
 /* Rubric: Hanteer 2 breakpoints:  480px en 1024px. */
@@ -252,8 +245,8 @@ nav li:hover .dropdown-menu{
     width: 100%;
   }
 
-  .hidden-phone{
-      display: none;
+  .hidden-phone {
+    display: none;
   }
 
   /* nav */
@@ -312,7 +305,7 @@ nav li:hover .dropdown-menu{
 
   /* Contact Form */
 
-  #contactform .form-name{
+  #contactform .form-name {
     flex-direction: column;
   }
 
@@ -320,29 +313,27 @@ nav li:hover .dropdown-menu{
   #contactform,
   #contactform ul li,
   #contactform ul li input[type="text"],
-  #contactform ul li textarea
-  {
+  #contactform ul li textarea {
     width: 100%;
   }
 
-  #contactform{
-      padding: 20px 0;
+  #contactform {
+    padding: 20px 0;
   }
 
-  #contactform .form-radio{
-      flex-direction: column;
+  #contactform .form-radio {
+    flex-direction: column;
   }
 
   /* hero slider */
 
-  #hero-shutter{
+  #hero-shutter {
     flex-direction: column;
   }
 
-  #hero-shutter .hero-slide{
+  #hero-shutter .hero-slide {
     width: 100%;
   }
-
 }
 
 /* Tablet Screens */
@@ -406,9 +397,9 @@ nav li:hover .dropdown-menu{
 
   /* Contact Form */
 
-  #contactform{
-      width: 100%;
-      height: 100%;
+  #contactform {
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -458,32 +449,32 @@ nav li:hover .dropdown-menu{
   }
 
   /* Contact Form */
-  #contactform{
+  #contactform {
     margin-top: 30px;
     border: none;
     border-radius: 10px;
   }
 
   /* Hero Shutter */
-  #hero-shutter{
-      flex-direction: row;
-      height: 100%;
+  #hero-shutter {
+    flex-direction: row;
+    height: 100%;
   }
 
-  #hero-shutter .hero-slide{
-      width: 25%;
-      border-top: none;
-      border-left: none;
-      border-right: 1px solid white;
-      border-bottom: none;
-      height: 100%;
+  #hero-shutter .hero-slide {
+    width: 25%;
+    border-top: none;
+    border-left: none;
+    border-right: 1px solid white;
+    border-bottom: none;
+    height: 100%;
   }
 
-  #hero-shutter .hero-slide:last-child{
+  #hero-shutter .hero-slide:last-child {
     border-right: none;
   }
 
-  #hero-shutter .hero-slide:hover{
-    width: 35%;
-}
+  #hero-shutter .hero-slide:hover {
+    width: 30%;
+  }
 }

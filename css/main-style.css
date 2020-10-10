@@ -11,14 +11,17 @@ zelf te bepalen maar moet wel substantieel anders zijn dan de voorgaande Tekstpa
 
 /* global styles */
 /* reset general list styles */
-li { list-style-type: none;}
+li {
+  list-style-type: none;
+}
 
 body {
   font-family: sans-serif;
   background-color: #ece8e1de;
 }
 
-#valorant-logo-left, #valorant-logo-right {
+#valorant-logo-left,
+#valorant-logo-right {
   fill: #ff4656;
   color: #ff4656;
 }
@@ -113,145 +116,150 @@ nav ul.dropdown-menu {
   content: "- ";
 }
 
-#news #news-title{
-    font-size: 3rem;
-    color: #ff4656;
-    text-shadow: 1px 1px 1px black;
+#news #news-title {
+  font-size: 3rem;
+  color: #ff4656;
+  text-shadow: 1px 1px 1px black;
 }
-
 
 /* Contact Form */
-#contactform{
-    background-color: #302f2e;
+#contactform {
+  background-color: #302f2e;
 }
 
-#contactform h1{
-    color: white;
-    text-align: center;
-    padding-bottom: 20px;
+#contactform h1 {
+  color: white;
+  text-align: center;
+  padding-bottom: 20px;
 }
 
- #contactform button{
-     padding: 10px 30px;
- }
-
- #contactform input {
-     background: none;
-     border-bottom: 1px solid #ff4656;
-     color: white;
-     padding-bottom: 2px;
- }
-
- #contactform .form-radio{
-    color: white;
+#contactform button {
+  padding: 10px 30px;
 }
 
- #contactform input::placeholder{
-     color: rgb(202, 202, 202);
- }
+#contactform input {
+  background: none;
+  border-bottom: 1px solid #ff4656;
+  color: white;
+  padding-bottom: 2px;
+}
 
- #contactform textarea{
-     padding: 5px;
-     background-color: rgba(200,200,200, .8);
-     color: white;
-     border-radius: 5px;
- }
+#contactform .form-radio {
+  color: white;
+}
 
- #contactform input:focus{
-        border-bottom: 1px solid orange;
-        outline: none;
- }
+#contactform input::placeholder {
+  color: rgb(202, 202, 202);
+}
 
- #contactform textarea:focus{
-     outline: none;
- }
+#contactform textarea {
+  padding: 5px;
+  background-color: rgba(200, 200, 200, 0.8);
+  color: white;
+  border-radius: 5px;
+}
 
- #contactform button{
-    border-radius: 10px;
-    font-weight: bold;
-    background-color: #ff4656d5;
-    color: white;
- }
+#contactform input:focus {
+  border-bottom: 1px solid orange;
+  outline: none;
+}
 
- #contactform button:hover{
-     color: white;
-     background-color: #dc2c3bd5;
- }
+#contactform textarea:focus {
+  outline: none;
+}
 
- /*
+#contactform button {
+  border-radius: 10px;
+  font-weight: bold;
+  background-color: #ff4656d5;
+  color: white;
+}
+
+#contactform button:hover {
+  color: white;
+  background-color: #dc2c3bd5;
+}
+
+/*
     About
 */
 
 /* fallback if there's no image */
-#hero-shutter .hero-slide:nth-child(odd){
-    background-color: #939393;
+#hero-shutter .hero-slide:nth-child(odd) {
+  background-color: #939393;
 }
 
-#hero-shutter .hero-slide{
-    color: #fff;
-    cursor: default;
+#hero-shutter .hero-slide {
+  color: #fff;
+  cursor: default;
 
-    background-position: right;
-    background-size: cover;
+  background-position: right;
+  background-size: cover;
 
-    transition: 0.4s;
+  transition: 0.4s;
 }
 
-#hero-shutter .hero-slide:hover{
-    box-shadow:inset 0 0 0 2000px rgba(34, 34, 34, 0.8);
+#hero-shutter .hero-slide:hover {
+  box-shadow: inset 0 0 0 2000px rgba(34, 34, 34, 0.8);
 }
 
-#hero-shutter .hero-slide h1{
-    text-shadow: 2px 2px 3px #000000;
+#hero-shutter .hero-slide h1 {
+  text-shadow: 2px 2px 3px #000000;
 }
 
-#hero-shutter .hero-slide h2{
-    padding-bottom: 10px;
+#hero-shutter .hero-slide h2 {
+  padding-bottom: 10px;
 }
 
-#hero-shutter .hero-slide p{
-    text-shadow: 1px 2px 1px #171717;
+#hero-shutter .hero-slide p {
+  text-shadow: 1px 2px 1px #171717;
 }
 
-#hero-shutter .hero-slide a{
-    color: white;
-    text-decoration: none;
+#hero-shutter .hero-slide a {
+  color: white;
+  text-decoration: none;
 }
 
-#hero-shutter .hero-slide a:hover{
-    text-shadow: -1px 2px 0px #171717;
-    color: #dc2c3bd5;
+#hero-shutter .hero-slide a:hover {
+  text-shadow: -1px 2px 0px #171717;
+  color: #dc2c3bd5;
 }
 
-#hero-shutter .hero-slide article{
-    padding: 0 30px;
-    display: none;
-    opacity: 0;
+#hero-shutter .hero-slide article {
+  padding: 0 30px;
+  display: none;
+  opacity: 0;
 }
 
-#hero-shutter .hero-slide:hover article{
-    display: block;
-    opacity: 1;
+#hero-shutter .hero-slide:hover article {
+  display: block;
+  opacity: 1;
 }
 
 /* Hide H1 on hover */
-#hero-shutter .hero-slide:hover h1{ display: none; }
-
-#hero-shutter .hero-slide#one{
-    background-image: url(../assets/images/pexels-thisisengineering-3861976.jpg);
+#hero-shutter .hero-slide:hover h1 {
+  display: none;
 }
 
-#hero-shutter .hero-slide#two{
-    background-image: url(../assets/images/pexels-suzy-hazelwood-1999352.jpg); 
+#hero-shutter .hero-slide#one {
+  background-image: url(../assets/images/pexels-thisisengineering-3861976.jpg);
 }
 
-#hero-shutter .hero-slide#three{
-    background-image: url(../assets/images/pexels-dio-hasbi-saniskoro-3280130.jpg);
+#hero-shutter .hero-slide#two {
+  background-image: url(../assets/images/pexels-suzy-hazelwood-1999352.jpg);
+}
+
+#hero-shutter .hero-slide#three {
+  background-image: url(../assets/images/pexels-dio-hasbi-saniskoro-3280130.jpg);
 }
 
 /* contact slide */
-#hero-shutter .hero-slide#four{
-    background-image: url(../assets/images/pexels-chepté-cormani-1416530.jpg);
-    background-position: center;
-    text-align: left;
+#hero-shutter .hero-slide#four {
+  background-image: url(../assets/images/pexels-chepté-cormani-1416530.jpg);
+  background-position: center;
+  text-align: left;
+}
+
+#hero-shutter .hero-slide#four li{
+    padding: 4px 0;
 }
