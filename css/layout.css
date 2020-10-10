@@ -19,7 +19,9 @@ Probeer het gebruik van niet responsive units zoals px te vermijden.
 
 body {
   display: flex;
-  flex-direction: column;
+	flex-direction: column;
+	
+	/* to make stuff like about page possible, at full height */
   position: absolute;
   height: 100%;
   width: 100%;
@@ -131,6 +133,7 @@ nav li:hover .dropdown-menu {
 #hero {
   text-align: center;
   position: relative;
+  z-index: -9999;
 }
 
 #hero #hero-description {
@@ -190,7 +193,6 @@ nav li:hover .dropdown-menu {
 }
 
 #contactform form {
-  margin: auto;
   width: 80%;
 }
 
@@ -218,9 +220,11 @@ nav li:hover .dropdown-menu {
   justify-content: center;
   flex-direction: column;
 
-  height: 450px;
+  background-position: right;
+  background-size: cover;
 
-  border-bottom: 1px solid white;
+  /* vertical layout */
+  height: 400px;
 }
 
 #hero-shutter .hero-slide:last-child {
@@ -294,6 +298,10 @@ nav li:hover .dropdown-menu {
     padding: 0 25px;
   }
 
+  #news #news-title {
+    text-align: left;
+  }
+
   /* hero */
 
   /* We can't show the hero on phone
@@ -333,6 +341,14 @@ nav li:hover .dropdown-menu {
 
   #hero-shutter .hero-slide {
     width: 100%;
+    /* Use a trick to set cover the background if it's a phone screen */
+    box-shadow: inset 0 0 0 2000px rgba(34, 34, 34, 0.8);
+  }
+
+  #hero-shutter .hero-slide h1,
+  #hero-shutter .hero-slide article {
+    display: block !important;
+    opacity: 1 !important;
   }
 }
 
@@ -462,11 +478,11 @@ nav li:hover .dropdown-menu {
   }
 
   #hero-shutter .hero-slide {
-    width: 25%;
     border-top: none;
     border-left: none;
     border-right: 1px solid white;
     border-bottom: none;
+    width: 25%;
     height: 100%;
   }
 

@@ -65,10 +65,6 @@ nav ul.dropdown-menu {
 }
 
 /* hero */
-#hero {
-  z-index: -9999;
-}
-
 #hero h1 {
   font-size: 6vw;
   color: #fff;
@@ -82,6 +78,12 @@ nav ul.dropdown-menu {
 }
 
 /* articles */
+
+#news #news-title {
+    font-size: 3rem;
+    color: #ff4656;
+    text-shadow: 1px 1px 1px black;
+  }
 
 #news article > h1 {
   font-size: 25px;
@@ -116,12 +118,6 @@ nav ul.dropdown-menu {
   content: "- ";
 }
 
-#news #news-title {
-  font-size: 3rem;
-  color: #ff4656;
-  text-shadow: 1px 1px 1px black;
-}
-
 /* Contact Form */
 #contactform {
   background-color: #302f2e;
@@ -131,10 +127,6 @@ nav ul.dropdown-menu {
   color: white;
   text-align: center;
   padding-bottom: 20px;
-}
-
-#contactform button {
-  padding: 10px 30px;
 }
 
 #contactform input {
@@ -159,17 +151,22 @@ nav ul.dropdown-menu {
   border-radius: 5px;
 }
 
+/* fade in yellow underline once input is focused */
 #contactform input:focus {
   border-bottom: 1px solid orange;
+  transition: 0.2s;
   outline: none;
 }
 
+/* remove outline of focused field */
 #contactform textarea:focus {
-  outline: none;
+    outline: none;
+    box-shadow: 0px 0px 2px 1.5px #ff4656;
 }
 
 #contactform button {
   border-radius: 10px;
+  padding: 10px 30px;
   font-weight: bold;
   background-color: #ff4656d5;
   color: white;
@@ -192,19 +189,19 @@ nav ul.dropdown-menu {
 #hero-shutter .hero-slide {
   color: #fff;
   cursor: default;
-
-  background-position: right;
-  background-size: cover;
+  border-bottom: 1px solid white;
 
   transition: 0.4s;
 }
 
 #hero-shutter .hero-slide:hover {
+  /* Use a trick to set cover the background */
   box-shadow: inset 0 0 0 2000px rgba(34, 34, 34, 0.8);
 }
 
 #hero-shutter .hero-slide h1 {
   text-shadow: 2px 2px 3px #000000;
+  padding-bottom: 10px;
 }
 
 #hero-shutter .hero-slide h2 {
