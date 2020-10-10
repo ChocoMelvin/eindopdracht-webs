@@ -618,4 +618,14 @@ nav li:hover .dropdown-menu {
   #hero-shutter .hero-slide:hover {
     width: 30%;
   }
+
+  /* Get half-spacing going when in desktop mode */
+  #news{
+    justify-content: space-between;
+  }
+
+  #news article {
+    width: 48%;
+    justify-content: space-around;
+  }
 }
