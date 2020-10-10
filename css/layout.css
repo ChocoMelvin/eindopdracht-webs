@@ -5,7 +5,9 @@ Probeer het gebruik van niet responsive units zoals px te vermijden.
 - Melvin
 */
 
-/* global */
+/*
+    Global
+*/
 
 /* reset UA padding & margins */
 * {
@@ -33,7 +35,13 @@ header {
   width: 100%;
 }
 
-/* nav */
+
+
+
+
+/*
+    Navigation
+*/
 nav {
   width: 100%;
   display: flex;
@@ -92,9 +100,17 @@ nav ul.dropdown-menu {
   display: none;
 }
 
-/* hero */
-#hero video {
+
+
+/*
+    Hero
+*/
+#hero video, #hero img {
   width: 100%;
+}
+
+#hero img{
+    max-height: 350px;
 }
 
 #hero {
@@ -126,7 +142,12 @@ nav ul.dropdown-menu {
   padding-right: 20px;
 }
 
-/* contact form */
+
+
+
+/*
+    Contact Form
+*/
 
 #contactform ul,
 #contactform form,
@@ -151,7 +172,6 @@ nav ul.dropdown-menu {
 
 #contactform ul li input[type="text"]{ width: 100%; }
 
-/* center form */
 #contactform form{
     margin: auto;
     width: 80%;
@@ -161,6 +181,12 @@ nav ul.dropdown-menu {
     width: 100%;
 }
 
+
+
+/*
+    About
+*/
+
 /* responsiveness | MEDIA QUERIES */
 /* Rubric: Hanteer 2 breakpoints:  480px en 1024px. */
 
@@ -169,6 +195,10 @@ nav ul.dropdown-menu {
   /* make container fill entire page if screen is small */
   .container {
     width: 100%;
+  }
+
+  .hidden-phone{
+      display: none;
   }
 
   /* nav */
@@ -222,9 +252,6 @@ nav ul.dropdown-menu {
   /* We can't show the hero on phone
        Nobody wants a video on the main page on the phone
     */
-  #hero {
-    display: none;
-  }
   nav #social-nav {
     width: 90%;
   }
@@ -311,11 +338,7 @@ nav ul.dropdown-menu {
 
   /* set first child on tablet full width */
   #news article:nth-of-type(1) {
-    width: 60%;
-  }
-
-  #news article:nth-of-type(2) {
-    width: 40%;
+    width: 100%;
   }
 
   /* Contact Form */
@@ -337,7 +360,7 @@ nav ul.dropdown-menu {
   /* news */
   /* set article 1/3rd width on desktop*/
   #news article {
-    width: 33%;
+    width: 50%;
   }
 
   nav ul li ul.dropdown-menu li {

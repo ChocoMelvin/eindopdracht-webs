@@ -20,6 +20,7 @@ body {
 
 #valorant-logo-left, #valorant-logo-right {
   fill: #ff4656;
+  color: #ff4656;
 }
 
 /* Text Selection Style */
@@ -31,7 +32,7 @@ body {
 /* header */
 header {
   background-color: rgba(0, 0, 0, 0.8);
-  box-shadow: 0 1px 3px 1px #000;
+  border-bottom: 2px solid #be0000;
 }
 
 /* nav */
@@ -101,7 +102,8 @@ nav ul.dropdown-menu {
 }
 
 #news article > p.author {
-  padding-top: 15px;
+  padding-top: 10px;
+  padding-left: 10px;
   font-style: italic;
   color: grey;
 }
@@ -170,3 +172,19 @@ nav ul.dropdown-menu {
      color: white;
      background-color: rgba(150,150,150,.8);
  }
+
+ /*
+    About
+*/
+
+#about{
+    text-align: center;
+}
+
+#about h1{
+    padding-bottom: 20px;
+}
+
+#about ul{
+    display: flex;
+}
