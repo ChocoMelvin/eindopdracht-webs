@@ -96,6 +96,11 @@ nav ul.dropdown-menu {
   border-radius: 5px;
 }
 
+#news .article-image{
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px 1px black;
+}
+
 #news #valstrike-article{
   background-image: url(../assets/images/Val1stStrike.png);
   /* make sure image zooms nicely */
@@ -107,6 +112,20 @@ nav ul.dropdown-menu {
   /* make sure image zooms nicely */
   background-position: top left 40%;
 }
+
+/* manually create a list item bullet */
+#news .article-text li::before{
+  content: "\2022";
+  color: #ff4656;
+  font-weight: bold;
+  font-size: 1.5em;
+  display: inline-block;
+  width: 0.3em;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+
 
 /* featured news */
 
