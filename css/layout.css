@@ -25,6 +25,9 @@ body {
   position: absolute;
   height: 100%;
   width: 100%;
+
+  /* Hide animation slides ins */
+  overflow-x: hidden;
 }
 
 /* content wrapper */
@@ -546,6 +549,11 @@ nav li:hover .dropdown-menu {
   #hero-shutter .hero-half-wrappable{
     width: 50%;
   }
+
+  /* it's half wrappable so we can use odd here to only get the middle border */
+  #hero-shutter .hero-half-wrappable:nth-child(odd){
+    border-left: 1px solid white;
+  }
 }
 
 /* Desktop Screens */
@@ -590,7 +598,23 @@ nav li:hover .dropdown-menu {
 
   nav:hover #valorant-logo-right {
     fill: rgb(240, 178, 64);
-    transition: 0.3s;
+    transition: .3s;
+  }
+
+  nav #valorant-logo-right{
+    fill: #ff4656;
+    transition: .2s;
+  }
+
+  nav:hover #logo-container svg{
+    animation: flip-logo-in .2s linear both;
+    transform-origin: center;
+  }
+
+  
+  nav #logo-container svg{
+    animation: flip-logo-out .2s linear both;
+    transform-origin: center;
   }
 
   /* Contact Form */
@@ -611,8 +635,11 @@ nav li:hover .dropdown-menu {
     border-left: none;
     border-right: 1px solid white;
     border-bottom: none;
-    width: 25%;
     height: 100%;
+    
+    /* Animation */
+    width: 25%;
+    transition: width .3s;
   }
 
   #hero-shutter .hero-slide:last-child {
@@ -620,7 +647,9 @@ nav li:hover .dropdown-menu {
   }
 
   #hero-shutter .hero-slide:hover {
+    /* Animation */
     width: 30%;
+    transition: width .3s;
   }
 
   /* Get half-spacing going when in desktop mode */

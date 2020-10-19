@@ -50,6 +50,10 @@ nav ul {
   padding: 0;
 }
 
+nav #social-nav {
+  color: white;
+}
+
 nav ul li {
   padding: 0 10px;
 }
@@ -95,6 +99,9 @@ nav ul.dropdown-menu {
   background-color: rgba(100,100,100, .2);
   border-radius: 5px;
 }
+
+#news article:nth-child(even){ animation: news-fadein-right .6s; }
+#news article:nth-child(odd){ animation: news-fadein-left .6s; }
 
 #news .article-image{
   border-radius: 5px;
@@ -243,13 +250,6 @@ p.author:before {
   color: #fff;
   cursor: default;
   border-bottom: 1px solid white;
-
-  transition: 0.4s;
-}
-
-/* it's half wrappable so we can use odd here to only get the middle border */
-#hero-shutter .hero-half-wrappable:nth-child(odd){
-  border-left: 1px solid white;
 }
 
 #hero-shutter .hero-slide:hover {
@@ -317,4 +317,41 @@ p.author:before {
 
 #hero-shutter .hero-slide#four li{
     padding: 4px 0;
+}
+
+/* Animations */
+@keyframes news-fadein-left{
+  from{
+    transform: translateX(-300%);
+  }
+  to{
+    transform: translateX(0%);
+  }
+}
+
+@keyframes news-fadein-right{
+  from{
+    transform: translateX(300%);
+  }
+  to{
+    transform: translateX(0%);
+  }
+}
+
+@keyframes flip-logo-in {
+  from {
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+  to {
+    transform: rotate3d(0, 1, 1, 360deg);
+  }
+}
+
+@keyframes flip-logo-out {
+  from{
+    transform: rotate3d(0, 1, 1, 360deg);
+  }
+  to{
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
 }
