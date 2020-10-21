@@ -106,7 +106,7 @@
       <form action="#">
         <h1>Contact</h1>
         <ul>
-          <div class="form-name">
+          <div class="form-column">
             <li>
               <input name="firstname" type="text" placeholder="Enter your first name">
             </li>
@@ -117,6 +117,19 @@
           <li>
             <input name="email" type="text" placeholder="Email">
           </li>
+          <div class="form-column form-gender">
+              <li>
+                <label for="gender">Gender:</label>
+                <select name="gender">
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                </select>
+              </li>
+              <li>
+                <input type="checkbox" name="priority">
+                <label for="priority">High Priority</label>
+              </li>
+          </div>
           <div class="form-radio">
             <li><input name="type" type="radio" value="Question" checked> Question</li>
             <li><input name="type" type="radio" value="Complaint"> Complaint</li>

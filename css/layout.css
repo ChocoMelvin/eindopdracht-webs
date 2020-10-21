@@ -65,9 +65,10 @@ nav {
 }
 
 /* flex alignment of nav */
+nav,
+nav ul,
 nav #menu-container,
-nav #social-nav ul,
-nav ul {
+nav #social-nav ul{
   display: flex;
 }
 /* Align the menu horizontally be default */
@@ -113,7 +114,6 @@ nav #social-nav .social-logo {
 /* don't show dropdown by default */
 nav ul.dropdown-menu {
   display: none;
-  background-color: #4c4c4c;
   z-index: 9999;
 }
 
@@ -331,16 +331,13 @@ nav li:hover .dropdown-menu {
   /* nav */
 
   nav,
-  nav ul {
+  nav ul,
+  nav #menu-container ul {
     flex-direction: column;
   }
 
   nav #menu-container {
     width: 100%;
-  }
-
-  nav #menu-container ul {
-    flex-direction: column;
   }
 
   nav #logo-container {
@@ -388,7 +385,7 @@ nav li:hover .dropdown-menu {
 
   /* Contact Form */
 
-  #contactform .form-name {
+  #contactform .form-column {
     flex-direction: column;
   }
 
@@ -443,8 +440,9 @@ nav li:hover .dropdown-menu {
     display: none;
   }
 
-  /* If the .article image has the general sibbling paragraph (the article text) set it to 70% */
-  #news .article-content .article-image ~ p{
+  /* If the .article image has the general sibbling paragraph (the article text) set it to 70%.
+  This is to ensure the content is full width if there's no image*/
+  #news .article-content .article-image ~ .article-text{
     width: 100%;
     padding: 0;
   }
@@ -542,10 +540,12 @@ nav li:hover .dropdown-menu {
     flex-wrap: wrap;
   }
 
+  /* set full width for normal slides */
   #hero-shutter .hero-slide {
     width: 100%;
   }
 
+  /* wrap half-wrappable hero shutters on tablet */
   #hero-shutter .hero-half-wrappable{
     width: 50%;
   }
@@ -575,6 +575,7 @@ nav li:hover .dropdown-menu {
     border-bottom: 1px solid white;
   }
 
+  /* reset border for last item */
   nav ul li ul.dropdown-menu li:last-child {
     border-bottom: 0;
   }
@@ -595,7 +596,8 @@ nav li:hover .dropdown-menu {
   nav ul.dropdown-menu {
     border-top: none !important;
   }
-
+  
+  /* set logo animations */
   nav:hover #valorant-logo-right {
     fill: rgb(240, 178, 64);
     transition: .3s;
@@ -606,16 +608,17 @@ nav li:hover .dropdown-menu {
     transition: .2s;
   }
 
+  nav #logo-container svg{
+    animation: flip-logo-out .2s linear both;
+    transform-origin: center;
+  }
+
   nav:hover #logo-container svg{
     animation: flip-logo-in .2s linear both;
     transform-origin: center;
   }
 
   
-  nav #logo-container svg{
-    animation: flip-logo-out .2s linear both;
-    transform-origin: center;
-  }
 
   /* Contact Form */
   #contactform {

@@ -44,27 +44,22 @@ header {
 
 /* nav */
 
-nav ul {
-  /* remove dot listing */
-  margin: 0;
-  padding: 0;
-}
-
-nav #social-nav {
-  color: white;
-}
-
 nav ul li {
   padding: 0 10px;
 }
 
-nav ul li a {
+nav ul.dropdown-menu{
+  background-color: #4c4c4c;
+}
+
+/* Nav link styling */
+nav a {
   color: white;
   text-decoration: none;
   text-align: center;
 }
 
-nav ul li:hover > a {
+nav li:hover > a {
   color: #ff4656;
 }
 
@@ -73,15 +68,17 @@ nav ul.dropdown-menu {
 }
 
 /* hero */
+#hero {
+  color: #fff;
+}
+
 #hero h1 {
   font-size: 6vw;
-  color: #fff;
   text-shadow: 2px 2px #ff4656;
 }
 
 #hero p {
   font-size: 2.2vw;
-  color: #fff;
   text-shadow: 2px 1px #000;
 }
 
@@ -95,6 +92,7 @@ nav ul.dropdown-menu {
   color:#dc2c3bd5;
 }
 
+/* Set background color and put a nice rounded border */
 #news article{
   background-color: rgba(100,100,100, .2);
   border-radius: 5px;
@@ -122,11 +120,12 @@ nav ul.dropdown-menu {
 
 /* manually create a list item bullet */
 #news .article-text li::before{
+  font-size: 1.5em;
   content: "\2022";
   color: #ff4656;
   font-weight: bold;
-  font-size: 1.5em;
   display: inline-block;
+  /* Fix Spacing */
   width: 0.3em;
   margin-left: 10px;
   margin-right: 10px;
@@ -136,7 +135,7 @@ nav ul.dropdown-menu {
 
 /* featured news */
 
-/* shared */
+/* shared big title*/
 #news-title {
     font-size: 3rem;
     color: #ff4656;
@@ -149,11 +148,13 @@ nav ul.dropdown-menu {
   padding-bottom: 6px;
 }
 
+/* header link styling */
 #featured-news article > h1 a {
   color: #2b2b2b;
   text-decoration: none;
 }
 
+/* featured news title hover */
 #featured-news article > h1 a:hover {
   color: #ff4656;
 }
@@ -178,13 +179,15 @@ p.author:before {
   content: "- ";
 }
 
+
+
 /* Contact Form */
 #contactform {
   background-color: #302f2e;
+  color: white;
 }
 
 #contactform h1 {
-  color: white;
   text-align: center;
   padding-bottom: 20px;
 }
@@ -192,12 +195,7 @@ p.author:before {
 #contactform input {
   background: none;
   border-bottom: 1px solid #ff4656;
-  color: white;
   padding-bottom: 2px;
-}
-
-#contactform .form-radio {
-  color: white;
 }
 
 #contactform input::placeholder {
@@ -206,9 +204,9 @@ p.author:before {
 
 #contactform textarea {
   padding: 5px;
-  background-color: rgba(200, 200, 200, 0.8);
-  color: white;
   border-radius: 5px;
+
+  background-color: rgb(202, 202, 202);
 }
 
 /* fade in yellow underline once input is focused */
@@ -237,16 +235,28 @@ p.author:before {
   background-color: #dc2c3bd5;
 }
 
+#contactform .form-gender select{
+  color: white;
+  background-color: #302f2e;
+  border: 1px solid white;
+  border-radius: 3px;
+  padding: 3px 5px;
+  margin-left: 5px;
+}
+
+#contactform .form-gender select:hover{
+  border: 1px solid orange;
+}
+
 /*
     About
 */
 
-/* fallback if there's no image */
-#hero-shutter .hero-slide:nth-child(odd) {
-  background-color: #939393;
-}
 
 #hero-shutter .hero-slide {
+  /* fallback if there's no image */
+  background-color: #939393;
+
   color: #fff;
   cursor: default;
   border-bottom: 1px solid white;
@@ -257,12 +267,10 @@ p.author:before {
   box-shadow: inset 0 0 0 2000px rgba(34, 34, 34, 0.8);
 }
 
-#hero-shutter .hero-slide h1 {
-  text-shadow: 2px 2px 3px #000000;
-  padding-bottom: 10px;
-}
-
+/* Set shadows of titles and paragraphs */
+#hero-shutter .hero-slide h1,
 #hero-shutter .hero-slide h2 {
+  text-shadow: 2px 2px 3px #000000;
   padding-bottom: 10px;
 }
 
@@ -270,8 +278,9 @@ p.author:before {
   text-shadow: 1px 2px 1px #171717;
 }
 
+/* remove underline of links and set colors */
 #hero-shutter .hero-slide a {
-  color: white;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -283,12 +292,10 @@ p.author:before {
 #hero-shutter .hero-slide article {
   padding: 0 30px;
   display: none;
-  opacity: 0;
 }
 
 #hero-shutter .hero-slide:hover article {
   display: block;
-  opacity: 1;
 }
 
 /* Hide H1 on hover */
@@ -296,6 +303,8 @@ p.author:before {
   display: none;
 }
 
+
+/* Set backgrounds for individual slides */
 #hero-shutter .hero-slide#one {
   background-image: url(../assets/images/pexels-thisisengineering-3861976.jpg);
 }
@@ -315,6 +324,7 @@ p.author:before {
   text-align: left;
 }
 
+/* Fix vertical padding on LI */
 #hero-shutter .hero-slide#four li{
     padding: 4px 0;
 }
