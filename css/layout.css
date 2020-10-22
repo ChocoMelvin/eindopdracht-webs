@@ -314,6 +314,48 @@ nav li:hover .dropdown-menu {
   text-align: center;
 }
 
+/* Gallery */
+
+/* Set default display behaviour for custom elements */
+#gallery{
+  margin-top: 20px;
+}
+
+#gallery title,
+#gallery bookmark {
+  display: block;
+  position: relative;
+}
+
+#gallery article{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+#gallery article > title{
+  background-color: grey;
+  padding: 10px;
+}
+
+#gallery .article-content {
+  padding: 5px 20px;
+}
+
+/* article content title */
+#gallery .article-content > title{
+  font-size: 2rem;
+}
+
+#gallery article.weapon > title::before{
+  content: 'WEAPON';
+}
+
+#gallery article.hero > title::before{
+  content: 'HERO';
+}
+
+
 /* responsiveness | MEDIA QUERIES */
 /* Rubric: Hanteer 2 breakpoints:  480px en 1024px. */
 

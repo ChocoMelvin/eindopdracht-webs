@@ -329,6 +329,20 @@ p.author:before {
     padding: 4px 0;
 }
 
+/* Gallery */
+
+#gallery article{
+  background-color: #232323;
+  color: #fff;
+}
+
+#gallery .progress-bar{
+  background-color: red;
+  height: 100%;
+  width: 100%;
+  border: 1px solid white;
+}
+
 /* Animations */
 @keyframes news-fadein-left{
   from{
