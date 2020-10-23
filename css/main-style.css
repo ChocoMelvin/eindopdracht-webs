@@ -67,6 +67,12 @@ nav ul.dropdown-menu {
   border-top: 1px solid red;
 }
 
+/* set hover animation */
+#social-nav li:hover .social-logo{
+  animation: social-hover .4s ease-in-out;
+}
+
+
 /* hero */
 #hero {
   color: #fff;
@@ -449,5 +455,14 @@ p.author:before {
   100%{
     filter: blur(0) grayscale(0%);
     transform: translateX(100%);
+  }
+}
+
+@keyframes social-hover {
+  from{
+    transform: rotate3d(0,0,0, 0deg);
+  }
+  to{
+    transform: rotate3d(0,1,0, 360deg);
   }
 }

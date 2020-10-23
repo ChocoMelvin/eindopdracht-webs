@@ -106,15 +106,19 @@
       <form action="#">
         <h1>Contact</h1>
         <ul>
+          <!-- Ensure Screenreader capability with pseudo labels -->
           <div class="form-column">
             <li>
+              <label class="sr-only" for="firstname">Firstname</label>
               <input name="firstname" type="text" placeholder="Enter your first name">
             </li>
             <li>
+              <label class="sr-only" for="lastname">Lastname</label>
               <input name="lastname" type="text" placeholder="Enter your last name">
             </li>
           </div>
           <li>
+            <label class="sr-only" for="lastname">E-mail</label>
             <input name="email" type="text" placeholder="Email">
           </li>
           <div class="form-column form-gender">

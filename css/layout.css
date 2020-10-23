@@ -38,6 +38,13 @@ body {
   margin: 0 auto;
 }
 
+/* make sure screenreader only items are not to be sene */
+.sr-only{
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+}
+
 /* ensure spacing between sections */
 section {
   margin: auto auto;
@@ -107,6 +114,14 @@ nav li a {
 
 nav #social-nav .social-logo {
   width: 35px;
+}
+
+#social-nav li:hover .social-logo ~ .social-hover{
+  display: inline-block;
+}
+
+.social-hover{
+  display: none;
 }
 
 /* nav dropdown */
@@ -440,6 +455,9 @@ nav li:hover .dropdown-menu {
 }
 
 /* Make sure the maps overlay the right way and the spaceholder does its job */
+.map{
+  text-align: center;
+}
 
 .map-container{
   position: relative;
