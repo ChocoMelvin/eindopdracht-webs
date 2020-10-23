@@ -348,6 +348,10 @@ nav li:hover .dropdown-menu {
   padding: 20px 20px;
 }
 
+#gallery .article-content p {
+  padding-bottom: 10px;
+}
+
 /* article content title */
 #gallery .article-content > title{
   font-size: 2rem;
