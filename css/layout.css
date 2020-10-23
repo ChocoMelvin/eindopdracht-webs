@@ -319,6 +319,9 @@ nav li:hover .dropdown-menu {
 /* Set default display behaviour for custom elements */
 #gallery{
   margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 #gallery title,
@@ -330,21 +333,32 @@ nav li:hover .dropdown-menu {
 #gallery article{
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 49%;
+  margin: 20px 0;
 }
 
 #gallery article > title{
   background-color: grey;
   padding: 10px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 #gallery .article-content {
-  padding: 5px 20px;
+  padding: 20px 20px;
 }
 
 /* article content title */
 #gallery .article-content > title{
   font-size: 2rem;
+  padding-bottom: 10px;
+}
+
+#gallery .article-content{
+  background-size: 90%;
+  background-position-y: center;
+  background-position-x: 90%;
+  background-repeat: no-repeat;
 }
 
 #gallery article.weapon > title::before{
@@ -355,6 +369,29 @@ nav li:hover .dropdown-menu {
   content: 'HERO';
 }
 
+/* gallery stats component */
+
+#gallery .stats,
+#gallery .rowset{
+  display: flex;
+}
+
+/* make sure there's spacing between elements */
+#gallery .stats li{
+  padding: 0px 10px 6px 0px;
+}
+
+#gallery .stats ul,
+#gallery .rowset,
+#gallery .rowset progress,
+#gallery .rowset li:last-child{
+  width: 100%;
+}
+
+#gallery .rowset li:first-child{
+  min-width: 100px;
+  word-break: break-all;
+}
 
 /* responsiveness | MEDIA QUERIES */
 /* Rubric: Hanteer 2 breakpoints:  480px en 1024px. */
@@ -498,6 +535,25 @@ nav li:hover .dropdown-menu {
   #news{
     margin: 0;
   }
+
+  /* gallery rowset wrap */
+  #gallery .rowset{
+    flex-direction: column;
+  }
+  
+  #gallery .rowset li{
+    /* override the first and last child specifications */
+    width: 100% !important;
+  }
+
+  #gallery{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #gallery article{
+    width: 90%;
+  }
 }
 
 /* Tablet Screens */
@@ -595,6 +651,15 @@ nav li:hover .dropdown-menu {
   /* it's half wrappable so we can use odd here to only get the middle border */
   #hero-shutter .hero-half-wrappable:nth-child(odd){
     border-left: 1px solid white;
+  }
+
+  #gallery{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #gallery article{
+    width: 75%;
   }
 }
 

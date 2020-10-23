@@ -332,15 +332,38 @@ p.author:before {
 /* Gallery */
 
 #gallery article{
-  background-color: #232323;
+  background-color: rgb(0 0 0 / 65%);
   color: #fff;
+  border-radius: 5px;
 }
 
-#gallery .progress-bar{
-  background-color: red;
-  height: 100%;
-  width: 100%;
-  border: 1px solid white;
+/* set title background color for weapon tabs */
+#gallery article.weapon > title{
+  background-color: #ff4656;
+}
+
+#gallery article.hero > title {
+  background-color: orange;
+}
+
+#gallery article .article-content > title{
+  color: #fff;
+  font-weight: bold;
+  text-shadow: 2px 1px 0px rgb(66, 66, 66);
+}
+
+/* progress bar */
+#gallery progress[value]::-webkit-progress-bar {
+  background-color: #eee;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25) inset;
+}
+
+#gallery progress[value]::-webkit-progress-value {
+  background-image:
+	   -webkit-linear-gradient(left, orange, #ff4656);
+
+    border-radius: 4px; 
 }
 
 /* Animations */
