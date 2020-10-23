@@ -376,13 +376,19 @@ nav li:hover .dropdown-menu {
 /* gallery stats component */
 
 #gallery .stats,
-#gallery .rowset{
+#gallery .rowset,
+#gallery .hero .abilities,
+#gallery .hero .ability{
   display: flex;
 }
 
 /* make sure there's spacing between elements */
 #gallery .stats li{
   padding: 0px 10px 6px 0px;
+}
+
+#gallery .stats{
+  margin-bottom: 5px;
 }
 
 #gallery .stats ul,
@@ -395,6 +401,36 @@ nav li:hover .dropdown-menu {
 #gallery .rowset li:first-child{
   min-width: 100px;
   word-break: break-all;
+}
+
+#gallery .hero .abilities{
+  flex-wrap: wrap;
+}
+
+#gallery .hero .ability{
+  flex-direction: column;
+  width: 50%;
+  padding-right: 5px;
+  padding-bottom: 5px;
+}
+
+#gallery .hero .ability > title::after{
+  padding-left: 5px;
+  text-transform: uppercase;
+}
+
+/* Show keys for abilities */
+#gallery .hero .ability.f > title::after{
+  content: '- f';
+}
+#gallery .hero .ability.q > title::after{
+  content: '- q';
+}
+#gallery .hero .ability.x > title::after{
+  content: '- x';
+}
+#gallery .hero .ability.e > title::after{
+  content: '- e';
 }
 
 /* responsiveness | MEDIA QUERIES */
@@ -558,6 +594,11 @@ nav li:hover .dropdown-menu {
   #gallery article{
     width: 90%;
   }
+
+  #gallery .abilities .ability{
+    width: 100%;
+    text-align: center;
+  }
 }
 
 /* Tablet Screens */
@@ -664,6 +705,11 @@ nav li:hover .dropdown-menu {
 
   #gallery article{
     width: 75%;
+  }
+
+  #gallery .abilities .ability{
+    width: 100%;
+    flex-direction: column;
   }
 }
 

@@ -335,6 +335,7 @@ p.author:before {
   background-color: rgb(0 0 0 / 65%);
   color: #fff;
   border-radius: 5px;
+  box-shadow: black 1px 1px 1px 0px;
 }
 
 /* set title background color for weapon tabs */
@@ -344,6 +345,11 @@ p.author:before {
 
 #gallery article.hero > title {
   background-color: orange;
+}
+
+/* header title */
+#gallery article > title {
+  border-bottom: 1px solid #fff;
 }
 
 #gallery article .article-content > title{
@@ -364,6 +370,16 @@ p.author:before {
 	   -webkit-linear-gradient(left, orange, #ff4656);
 
     border-radius: 4px; 
+}
+
+#gallery .hero .ability > title{
+  color: orange;
+  font-weight: bold;
+}
+
+#gallery .hero .ability > title::after{
+  color: #cacaca;
+  font-weight: lighter;
 }
 
 /* Animations */
