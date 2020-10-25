@@ -32,7 +32,8 @@ body {
 }
 
 /* make sure screenreader only items are not to be sene */
-.sr-only{
+.sr-only,
+.anchor{
   position: absolute;
   left: -9999px;
   top: -9999px;
