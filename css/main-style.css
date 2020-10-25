@@ -199,15 +199,20 @@ p.author:before {
 }
 
 #contactform input {
+  /* reset the background for input fields */
   background: none;
+  /* get a nice little line going under the input fields */
   border-bottom: 1px solid #ff4656;
   padding-bottom: 2px;
 }
 
-#contactform input::placeholder {
+/* I prefer to have one place to set my element colors */
+#contactform input::placeholder,
+#contactform input {
   color: rgb(202, 202, 202);
 }
 
+/* make the textarea rounded and give it some padding */
 #contactform textarea {
   padding: 5px;
   border-radius: 5px;
@@ -330,7 +335,7 @@ p.author:before {
   text-align: left;
 }
 
-/* Fix vertical padding on LI */
+/* Fix vertical padding on list elements for the contact slide */
 #hero-shutter .hero-slide#four li{
     padding: 4px 0;
 }
@@ -344,9 +349,11 @@ p.author:before {
   box-shadow: black 1px 1px 1px 0px;
 }
 
-/* set title background color for weapon tabs */
-/* default */
+/* Card Titles
+  I want to give every 'type of' card it's own title background color
+*/
 
+/* default */
 #gallery article > title{
   background-color: grey;
 }
@@ -363,7 +370,7 @@ p.author:before {
   background-color: #202b43;
 }
 
-/* header title */
+/* big header title */
 #gallery article > title {
   border-bottom: 1px solid #fff;
 }
@@ -400,10 +407,16 @@ p.author:before {
 
 #gallery .map-container:hover .map-overlay{
   animation: map-hover-in .5s linear;
+  /* to keep the animation from resetting to its original state */
   animation-fill-mode: forwards;
 }
 
 /* Animations */
+
+/* These slide in the news articles from the side.
+  Left and right is self-explanatory.
+  These are used with even and odd selectors.
+*/
 @keyframes news-fadein-left{
   from{
     transform: translateX(-300%);
@@ -421,6 +434,10 @@ p.author:before {
     transform: translateX(0%);
   }
 }
+
+/* These flip the logo alogn it's Y and Z axis 360 degrees.
+  This is combined with the color change that wouldn't be easily doable inside keyframes.
+*/
 
 @keyframes flip-logo-in {
   from {
@@ -440,6 +457,9 @@ p.author:before {
   }
 }
 
+/* Slides in the map with a blur and grayscale
+  I personally think this gives it a better 'swooshing' effect
+*/
 @keyframes map-hover-in{
   0%{
     filter: blur(5px) grayscale(100%);
@@ -458,6 +478,7 @@ p.author:before {
   }
 }
 
+/* simply rotates an image along it's Y axis 360 degrees */
 @keyframes social-hover {
   from{
     transform: rotate3d(0,0,0, 0deg);
