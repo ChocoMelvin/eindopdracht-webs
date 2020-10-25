@@ -1,0 +1,47 @@
+DUO    | Melvin van Bree & Job Zalmé
+Groep  | 42IN01L3
+Docent | Catharina Stam
+Github | https://github.com/MelvinVanBree/eindopdracht-webs/
+Pages  | https://melvinvanbree.github.io/eindopdracht-webs/
+
+Aandachtspunten (misschien niet meteen duidelijk)
+===============
+    De news articles hebben een slide-in en zijn om en om aligned en de content past zich automatisch aan als er geen image aanwezig is.
+    De map hover op de gameplay pagina.
+    De half-wrap op de about pagina op tablet formaat.
+    Geanimeerde focus op de contact pagina.
+    Custom selection styling.
+
+Animations
+===============
+Animatie keyframes zijn te vinden vanaf main-style.css:420.
+Deze komen terug in:
+    layout.css:816-823 | logo flip    | Logo in de nav bar. Alleen gebruikt op desktop formaat.
+    main-style.css:72  | social-hover | Hover animation boven rechts in de nav.
+    main-style.css:107 | news-fade-in | News page on page load.
+    main-style.css:409 | map-hover    | Hierbij is gebruikt gemaakt van verschillende properties. De blur en de grayscale moeten het 'swoosh' effect verbeteren.
+
+Contactformulier
+================
+    Voor de styling is grotendeels gebruikt gemaakt van placeholders en borders.
+    Het 'screenreader probleem' is opgelost door gebruik te maken van labels die buiten het scherm vallen.
+    Het formulier is op 3 formaten responsive ipv 2.
+    Orange focus kleur.
+
+Responsiveness
+================
+    Wij hebben grotendeel gebruik gemaakt van row-column collapse.
+    Op de about page is er een half-wrap op tabletformaat.
+    De website is op elk van de breakpoints volledig gebruikersvriendelijk en visueel correct.
+
+Quality
+================
+    Er is onderscheid gemaakt tussen layout en styling in de css files.
+	Echter is dit achteraf niet de meest handige keuze geweest. Door vooral de breakpoints, die wij maar op een plek wilden gebruiken (layout.css).
+    Wij hebben grotendeels geprobeerd elemente re-usable te maken. Onderdeel-specifieke styling is vooral toegepast door gebruik te maken van de ID.
+    Er is gebruik gemaakt van semantische tags zoals section, article & header.
+
+Verbeterpunten
+================
+   Geen inline-svg gebruiken. Dit vooral om de readability en caching.
+   Beter commenteren op moeilijke onderdelen, om code begrip van mede-coders te verbeteren.

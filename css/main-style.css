@@ -317,20 +317,20 @@ p.author:before {
 
 /* Set backgrounds for individual slides */
 #hero-shutter .hero-slide#one {
-  background-image: url(../assets/images/pexels-thisisengineering-3861976.jpg);
+  background-image: url(../assets/images/coding.jpg);
 }
 
 #hero-shutter .hero-slide#two {
-  background-image: url(../assets/images/pexels-suzy-hazelwood-1999352.jpg);
+  background-image: url(../assets/images/photos.jpg);
 }
 
 #hero-shutter .hero-slide#three {
-  background-image: url(../assets/images/pexels-dio-hasbi-saniskoro-3280130.jpg);
+  background-image: url(../assets/images/people.jpg);
 }
 
 /* contact slide */
 #hero-shutter .hero-slide#four {
-  background-image: url(../assets/images/pexels-chepté-cormani-1416530.jpg);
+  background-image: url(../assets/images/contact.jpg);
   background-position: center;
   text-align: left;
 }
