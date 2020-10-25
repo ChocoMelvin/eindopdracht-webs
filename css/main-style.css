@@ -67,6 +67,12 @@ nav ul.dropdown-menu {
   border-top: 1px solid red;
 }
 
+/* set hover animation */
+#social-nav li:hover .social-logo{
+  animation: social-hover .4s ease-in-out;
+}
+
+
 /* hero */
 #hero {
   color: #fff;
@@ -339,12 +345,22 @@ p.author:before {
 }
 
 /* set title background color for weapon tabs */
+/* default */
+
+#gallery article > title{
+  background-color: grey;
+}
+
 #gallery article.weapon > title{
   background-color: #ff4656;
 }
 
 #gallery article.hero > title {
   background-color: orange;
+}
+
+#gallery article.map > title{
+  background-color: #202b43;
 }
 
 /* header title */
@@ -382,6 +398,11 @@ p.author:before {
   font-weight: lighter;
 }
 
+#gallery .map-container:hover .map-overlay{
+  animation: map-hover-in .5s linear;
+  animation-fill-mode: forwards;
+}
+
 /* Animations */
 @keyframes news-fadein-left{
   from{
@@ -416,5 +437,32 @@ p.author:before {
   }
   to{
     transform: rotate3d(0, 0, 0, 0deg);
+  }
+}
+
+@keyframes map-hover-in{
+  0%{
+    filter: blur(5px) grayscale(100%);
+    transform: translateX(0%);
+  }
+  30%{
+    filter: blur(5px) grayscale(100%);
+    transform: translateX(100%);
+  }
+  75%{
+    filter: blur(0px) grayscale(100%);
+  }
+  100%{
+    filter: blur(0) grayscale(0%);
+    transform: translateX(100%);
+  }
+}
+
+@keyframes social-hover {
+  from{
+    transform: rotate3d(0,0,0, 0deg);
+  }
+  to{
+    transform: rotate3d(0,1,0, 360deg);
   }
 }

@@ -38,6 +38,13 @@ body {
   margin: 0 auto;
 }
 
+/* make sure screenreader only items are not to be sene */
+.sr-only{
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+}
+
 /* ensure spacing between sections */
 section {
   margin: auto auto;
@@ -107,6 +114,14 @@ nav li a {
 
 nav #social-nav .social-logo {
   width: 35px;
+}
+
+#social-nav li:hover .social-logo ~ .social-hover{
+  display: inline-block;
+}
+
+.social-hover{
+  display: none;
 }
 
 /* nav dropdown */
@@ -335,10 +350,12 @@ nav li:hover .dropdown-menu {
   flex-direction: column;
   width: 49%;
   margin: 20px 0;
+
+  /* make sure the height isn't affected by flexbox but by content */
+  height: fit-content;
 }
 
 #gallery article > title{
-  background-color: grey;
   padding: 10px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
@@ -371,6 +388,10 @@ nav li:hover .dropdown-menu {
 
 #gallery article.hero > title::before{
   content: 'AGENT';
+}
+
+#gallery article.map > title::before{
+  content: 'MAP';
 }
 
 /* gallery stats component */
@@ -431,6 +452,39 @@ nav li:hover .dropdown-menu {
 }
 #gallery .hero .ability.e > title::after{
   content: '- e';
+}
+
+/* Make sure the maps overlay the right way and the spaceholder does its job */
+.map{
+  text-align: center;
+}
+
+.map-container{
+  position: relative;
+  overflow: hidden;
+}
+
+.map-container img{
+  width: 100%;
+}
+
+/* hide the spaceholder */
+.map-container .map-placeholder{
+  opacity: 0;
+}
+
+.map-container .map-base{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.map-container .map-overlay{
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
 }
 
 /* responsiveness | MEDIA QUERIES */
