@@ -661,7 +661,7 @@ nav #valorant-logo-right{
 }
 
 /* Tablet Screens */
-@media only screen and (min-width: 480px) and (max-width: 1024px) {
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
   .container {
     width: 90%;
   }
@@ -774,7 +774,7 @@ nav #valorant-logo-right{
 }
 
 /* Desktop Screens */
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1025px) {
   /* nav*/
   /* pull social-nav to the right on desktop screens */
   nav #social-nav {
