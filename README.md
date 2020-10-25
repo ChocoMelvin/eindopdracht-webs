@@ -16,7 +16,7 @@
 	- [x] Visuele oplossingen (Docent controle) ***Er zijn geen grids gebruikt. Maar de criteria geeft aan en/of.***
 	- [x] Responsive Webformulier (Student uitleg)
 	- [x] Design Webformulier (Docent controle) ***Workaround voor het label probleem is het te verbergen***
-	- [x] Animatie (Student uitleg) ***Vanaf main-style.css:420 | IPV aparte attributes (animation-name etc) is er alleen animation gebruikt in sommige elements.***
+	- [x] Animatie (Student uitleg) ***Vanaf main-style.css:420 | IPV aparte attributes (animation-name etc) is er alleen animation gebruikt in sommige elements. Dit is in-principe hetzelfde***
 
 ### Knockout Criteria
 - [x] De website heeft tenminste 5 webpagina's welke een significant andere layout/structuur hebben EN minimaal 1 webformulier
