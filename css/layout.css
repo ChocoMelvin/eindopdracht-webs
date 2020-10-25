@@ -370,7 +370,7 @@ nav li:hover .dropdown-menu {
 }
 
 #gallery article.hero > title::before{
-  content: 'HERO';
+  content: 'AGENT';
 }
 
 /* gallery stats component */
